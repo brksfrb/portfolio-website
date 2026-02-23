@@ -142,6 +142,11 @@ const { title = "Portfolio", description = "Developer portfolio" } = Astro.props
         position: relative;
     }
 
+    @media (max-width: 860px) {
+        .nav-links { gap: 1.0rem; }
+        .nav-links a { font-size: 0.6rem; }
+    }
+
     .nav-links a::after {
         content: '';
         position: absolute;
