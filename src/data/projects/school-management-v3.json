@@ -1,0 +1,18 @@
+{
+  "id": "school-management-v3",
+  "title": "School Management System V3",
+  "shortDescription": "A fully functional school management platform built in 2 weeks, designed for real classroom deployment.",
+  "description": "A production-ready school management system featuring student tracking, grade management, attendance, and reporting. Designed and deployed for real-life use in 1-2 classrooms. Built with Flask and OOP principles, using pickle for persistent storage.",
+  "languages": ["Python"],
+  "tags": ["Flask", "OOP", "Backend", "Web", "Real-World"],
+  "category": "web",
+  "featured": true,
+  "featuredOrder": 1,
+  "highlights": [
+    "Fully functional in under 2 weeks",
+    "Designed for real classroom deployment",
+    "Complete OOP architecture"
+  ],
+  "screenshots": [],
+  "links": {}
+}

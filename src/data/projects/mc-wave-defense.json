@@ -1,0 +1,13 @@
+{
+  "id": "mc-wave-defense",
+  "title": "Minecraft Wave Defense Plugin",
+  "shortDescription": "A full wave-defense game mode plugin with spawner mechanics and weapon upgrade systems.",
+  "description": "A Java-based Minecraft plugin implementing a complete wave defense game mode. Features custom enemy spawner mechanics, weapon upgrade trees, command interface, and progression logic — all running server-side.",
+  "languages": ["Java"],
+  "tags": ["Minecraft", "Plugin", "Java", "Game Mode", "Server"],
+  "category": "plugin",
+  "featured": false,
+  "highlights": ["Wave spawner & upgrade systems", "Full command interface"],
+  "screenshots": [],
+  "links": {}
+}

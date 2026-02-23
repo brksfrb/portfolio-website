@@ -1,0 +1,13 @@
+{
+  "id": "remote-screen-sharing",
+  "title": "Remote Screen Sharing",
+  "shortDescription": "A custom-built screen sharing solution over raw sockets.",
+  "description": "Built from scratch using Python's socket library, this application captures the screen, compresses and streams frame data over a raw TCP connection to a remote viewer in real time — no third-party services.",
+  "languages": ["Python"],
+  "tags": ["Socket", "Networking", "Screen Capture", "Real-Time"],
+  "category": "networking",
+  "featured": false,
+  "highlights": ["Raw socket implementation", "Real-time frame streaming"],
+  "screenshots": [],
+  "links": {}
+}

@@ -1,0 +1,15 @@
+{
+  "id": "fontix",
+  "title": "Fontix",
+  "shortDescription": "A WinUI3 font utility app published on the Microsoft Store.",
+  "description": "A polished Windows app built with WinUI3 and C# that provides font exploration, preview, and management utilities. Published and live on the Microsoft Store.",
+  "languages": ["C#"],
+  "tags": ["WinUI3", "Microsoft Store", "Published", "Desktop", "Windows"],
+  "category": "desktop",
+  "featured": false,
+  "highlights": ["Live on Microsoft Store", "WinUI3 modern Windows UI"],
+  "screenshots": [],
+  "links": {
+    "store": "https://apps.microsoft.com/detail/9nkk28v073sm"
+  }
+}

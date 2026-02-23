@@ -1,0 +1,13 @@
+{
+  "id": "turntable-viewer",
+  "title": "Turntable 3D Viewer",
+  "shortDescription": "Converts 2D image frames captured from a turntable into interactive 3D model previews.",
+  "description": "A tkinter-based application that ingests a sequence of 2D frames captured by rotating an object on a turntable, then reconstructs and presents an interactive 3D model viewer using the turntable photogrammetry method.",
+  "languages": ["Python"],
+  "tags": ["tkinter", "3D", "Computer Vision", "Photogrammetry"],
+  "category": "cv",
+  "featured": false,
+  "highlights": ["Turntable photogrammetry method", "2D frames → 3D model pipeline"],
+  "screenshots": [],
+  "links": {}
+}

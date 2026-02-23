@@ -1,0 +1,20 @@
+{
+  "id": "coach-system",
+  "title": "Coach System",
+  "shortDescription": "Management system for teachers/tutors.",
+  "description": "A system where you can create your students, assign them to yourself, manage them and assign them homeworks. All in a single system, focused on decreasing teacher load.",
+  "languages": ["Python"],
+  "tags": ["Flask", "Web", "Audio Processing", "OOP", "Real-World"],
+  "category": "web",
+  "featured": true,
+  "featuredOrder": 4,
+  "highlights": [
+    "Clean backend with separation of logic",
+    "Clean and modern UI, unlike old systems",
+    "Most of what teachers need"
+  ],
+  "screenshots": [],
+  "links": {
+    "github": "https://github.com/brksfrb/coach-system"
+  }
+}

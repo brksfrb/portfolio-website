@@ -1,0 +1,494 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+    const projectFiles = await Astro.glob('../../data/projects/*.json');
+    return projectFiles.map(f => ({
+        params: { id: f.default.id },
+        props: { project: f.default },
+    }));
+}
+
+const { project } = Astro.props;
+
+const categoryIcons: Record<string, string> = {
+    web: '🌐', desktop: '🖥️', game: '🎮', ai: '🧠',
+    cv: '👁️', hardware: '⚡', networking: '🔗', mobile: '📱', plugin: '🧩',
+};
+
+function langClass(lang: string) {
+    return 'lang-' + lang.toLowerCase().replace(/[^a-z]/g, '').replace('c++', 'cpp');
+}
+---
+
+<Layout title={`${project.title} — Portfolio`} description={project.shortDescription}>
+    <section class="detail-page">
+        <div class="container">
+
+            <!-- BACK -->
+            <a href="/projects" class="back-link">
+                <span>←</span> All Projects
+            </a>
+
+            <!-- HEADER -->
+            <div class="detail-header">
+                <div class="detail-meta">
+          <span class="category-badge">
+            {categoryIcons[project.category] || '📁'} {project.category}
+          </span>
+                    {project.featured && <span class="featured-badge">★ Featured</span>}
+                </div>
+
+                <h1 class="detail-title">{project.title}</h1>
+                <p class="detail-short">{project.shortDescription}</p>
+
+                <div class="detail-langs">
+                    {project.languages.map((lang: string) => (
+                            <span class={`tag ${langClass(lang)}`}>{lang}</span>
+                    ))}
+                    {project.tags.map((tag: string) => (
+                            <span class="tag">{tag}</span>
+                    ))}
+                </div>
+
+                {Object.keys(project.links || {}).length > 0 && (
+                        <div class="detail-links">
+                            {project.links.github && (
+                                    <a href={project.links.github} class="link-btn" target="_blank" rel="noopener">
+                                        GitHub →
+                                    </a>
+                            )}
+                            {project.links.demo && (
+                                    <a href={project.links.demo} class="link-btn accent" target="_blank" rel="noopener">
+                                        Live Demo →
+                                    </a>
+                            )}
+                            {project.links.store && (
+                                    <a href={project.links.store} class="link-btn accent" target="_blank" rel="noopener">
+                                        View on Store →
+                                    </a>
+                            )}
+                        </div>
+                )}
+            </div>
+
+            <div class="detail-body">
+
+                <!-- SCREENSHOTS -->
+                {project.screenshots && project.screenshots.length > 0 && (
+                        <div class="screenshots-section">
+                            <h2 class="section-heading">
+                                <span class="mono-dim">// </span>Screenshots
+                            </h2>
+                            <div class="screenshots-grid">
+                                {project.screenshots.map((src: string, i: number) => (
+                                        <div class="screenshot-wrap" data-index={i}>
+                                            <img
+                                                    src={src.startsWith('http') ? src : `/src/data/screenshots/${src}`}
+                                                    alt={`${project.title} screenshot ${i + 1}`}
+                                                    class="screenshot-img"
+                                                    loading="lazy"
+                                            />
+                                        </div>
+                                ))}
+                            </div>
+                        </div>
+                )}
+
+                <!-- REASON -->
+                {project.reason && (
+                        <div class="reason-section">
+                            <h2 class="section-heading">
+                                <span class="mono-dim">// </span>Why This Exists
+                            </h2>
+                            <p class="reason-text">
+                                <span class="reason-prefix">$ </span>{project.reason}
+                            </p>
+                        </div>
+                )}
+
+                <!-- DESCRIPTION -->
+                <div class="desc-section">
+                    <h2 class="section-heading">
+                        <span class="mono-dim">// </span>About
+                    </h2>
+                    <p class="detail-desc">{project.description}</p>
+                </div>
+
+                <!-- HIGHLIGHTS -->
+                {project.highlights && project.highlights.length > 0 && (
+                        <div class="highlights-section">
+                            <h2 class="section-heading">
+                                <span class="mono-dim">// </span>Highlights
+                            </h2>
+                            <ul class="highlights-list">
+                                {project.highlights.map((h: string) => (
+                                        <li class="highlight-item">
+                                            <span class="highlight-arrow">›</span>
+                                            {h}
+                                        </li>
+                                ))}
+                            </ul>
+                        </div>
+                )}
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close">✕</button>
+        <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous">‹</button>
+        <button class="lightbox-next" id="lightbox-next" aria-label="Next">›</button>
+        <div class="lightbox-img-wrap">
+            <img src="" alt="" id="lightbox-img" />
+        </div>
+        <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+</Layout>
+
+<script>
+    const screenshots = document.querySelectorAll<HTMLElement>('.screenshot-wrap');
+    const lightbox = document.getElementById('lightbox')!;
+    const backdrop = document.getElementById('lightbox-backdrop')!;
+    const lbImg = document.getElementById('lightbox-img') as HTMLImageElement;
+    const lbCounter = document.getElementById('lightbox-counter')!;
+    const lbClose = document.getElementById('lightbox-close')!;
+    const lbPrev = document.getElementById('lightbox-prev')!;
+    const lbNext = document.getElementById('lightbox-next')!;
+
+    const srcs = Array.from(screenshots).map(el => el.querySelector('img')!.src);
+    let current = 0;
+
+    function open(index: number) {
+        current = index;
+        lbImg.src = srcs[current];
+        lbCounter.textContent = `${current + 1} / ${srcs.length}`;
+        lightbox.classList.add('active');
+        backdrop.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        lbPrev.style.display = srcs.length > 1 ? '' : 'none';
+        lbNext.style.display = srcs.length > 1 ? '' : 'none';
+    }
+
+    function close() {
+        lightbox.classList.remove('active');
+        backdrop.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function prev() { open((current - 1 + srcs.length) % srcs.length); }
+    function next() { open((current + 1) % srcs.length); }
+
+    screenshots.forEach((el, i) => el.addEventListener('click', () => open(i)));
+    lbClose.addEventListener('click', close);
+    backdrop.addEventListener('click', close);
+    lbPrev.addEventListener('click', prev);
+    lbNext.addEventListener('click', next);
+    document.addEventListener('keydown', e => {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowLeft') prev();
+        if (e.key === 'ArrowRight') next();
+    });
+</script>
+
+<style>
+    .detail-page { padding: 3rem 0 6rem; }
+
+    .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: var(--font-mono);
+        font-size: 0.78rem;
+        color: var(--text-muted);
+        text-decoration: none;
+        letter-spacing: 0.05em;
+        margin-bottom: 3rem;
+        transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--accent); }
+
+    .detail-header { margin-bottom: 3rem; }
+
+    .detail-meta {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .category-badge {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--text-dim);
+        border: 1px solid var(--border);
+        padding: 0.25rem 0.7rem;
+        border-radius: 3px;
+        text-transform: capitalize;
+        letter-spacing: 0.05em;
+    }
+
+    .featured-badge {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--accent);
+        border: 1px solid var(--accent);
+        padding: 0.25rem 0.7rem;
+        border-radius: 3px;
+        letter-spacing: 0.05em;
+    }
+
+    .detail-title {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        background: linear-gradient(135deg, var(--text), var(--accent));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+        line-height: 1.1;
+    }
+
+    .detail-short {
+        font-size: 1.1rem;
+        color: var(--text-dim);
+        max-width: 680px;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+    }
+
+    .detail-langs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .detail-links {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    .link-btn {
+        font-family: var(--font-mono);
+        font-size: 0.78rem;
+        padding: 0.5rem 1.2rem;
+        border: 1px solid var(--border);
+        color: var(--text-dim);
+        border-radius: 4px;
+        transition: all 0.2s;
+        text-decoration: none;
+        letter-spacing: 0.05em;
+    }
+
+    .link-btn:hover, .link-btn.accent {
+        border-color: var(--accent);
+        color: var(--accent);
+    }
+
+    .detail-body {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        max-width: 860px;
+    }
+
+    .section-heading {
+        font-family: var(--font-display);
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 1.25rem;
+    }
+
+    .mono-dim {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--text-muted);
+    }
+
+    /* SCREENSHOTS */
+    .screenshots-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1rem;
+    }
+
+    .screenshot-wrap {
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: all 0.3s;
+        aspect-ratio: 16/9;
+        background: var(--surface);
+    }
+
+    .screenshot-wrap:hover {
+        border-color: var(--accent);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    }
+
+    .screenshot-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s;
+    }
+
+    .screenshot-wrap:hover .screenshot-img { transform: scale(1.03); }
+
+    /* REASON */
+    .reason-text {
+        font-family: var(--font-mono);
+        font-size: 0.9rem;
+        color: var(--accent-2);
+        line-height: 1.8;
+        padding: 1.25rem 1.5rem;
+        border: 1px solid var(--accent-2);
+        border-left: 3px solid var(--accent-2);
+        border-radius: 4px;
+        background: var(--accent-2-dim);
+    }
+
+    .reason-prefix {
+        color: var(--text-muted);
+        user-select: none;
+    }
+
+    /* DESCRIPTION */
+    .detail-desc {
+        font-size: 1rem;
+        color: var(--text-dim);
+        line-height: 1.9;
+    }
+
+    /* HIGHLIGHTS */
+    .highlights-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .highlight-item {
+        display: flex;
+        gap: 0.75rem;
+        font-size: 0.95rem;
+        color: var(--text-dim);
+        align-items: flex-start;
+        padding: 0.75rem 1rem;
+        border: 1px solid var(--border);
+        border-left: 3px solid var(--accent-2);
+        border-radius: 4px;
+        background: var(--surface);
+        line-height: 1.5;
+    }
+
+    .highlight-arrow {
+        color: var(--accent-2);
+        font-size: 1.2rem;
+        flex-shrink: 0;
+        line-height: 1.3;
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+    }
+
+    .lightbox.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .lightbox-backdrop {
+        position: fixed;
+        inset: 0;
+        z-index: 999;
+        background: rgba(0, 0, 0, 0.92);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+        backdrop-filter: blur(6px);
+    }
+
+    .lightbox-backdrop.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .lightbox-img-wrap {
+        position: relative;
+        z-index: 1001;
+        max-width: 90vw;
+        max-height: 85vh;
+    }
+
+    #lightbox-img {
+        max-width: 90vw;
+        max-height: 85vh;
+        object-fit: contain;
+        border-radius: 6px;
+        border: 1px solid var(--border);
+        box-shadow: 0 0 60px rgba(0,0,0,0.8);
+    }
+
+    .lightbox-close,
+    .lightbox-prev,
+    .lightbox-next {
+        position: fixed;
+        z-index: 1002;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        color: var(--text);
+        cursor: pointer;
+        border-radius: 4px;
+        transition: all 0.2s;
+        font-size: 1.2rem;
+        line-height: 1;
+    }
+
+    .lightbox-close:hover,
+    .lightbox-prev:hover,
+    .lightbox-next:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+    }
+
+    .lightbox-close { top: 1.5rem; right: 1.5rem; padding: 0.5rem 0.8rem; }
+    .lightbox-prev { left: 1.5rem; top: 50%; transform: translateY(-50%); padding: 0.75rem 1rem; font-size: 1.8rem; }
+    .lightbox-next { right: 1.5rem; top: 50%; transform: translateY(-50%); padding: 0.75rem 1rem; font-size: 1.8rem; }
+
+    .lightbox-counter {
+        position: fixed;
+        bottom: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1002;
+        font-family: var(--font-mono);
+        font-size: 0.78rem;
+        color: var(--text-muted);
+        background: var(--surface);
+        border: 1px solid var(--border);
+        padding: 0.3rem 0.8rem;
+        border-radius: 3px;
+    }
+</style>

@@ -1,0 +1,436 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const timeline = [
+    { year: "Early", label: "Started with Scratch", detail: "100+ projects. Learned to think like a builder.", lang: "Scratch" },
+    { year: "Next", label: "Discovered Python", detail: "300+ projects later, still going. Voice assistants, ML, GUIs, games, hardware.", lang: "Python" },
+    { year: "Then", label: "Expanded to Unity & C#", detail: "50+ Unity games. Published to PlayStore. WinUI3 apps on Microsoft Store.", lang: "C# / Unity" },
+    { year: "Also", label: "Systems programming in C++", detail: "15-20 projects. Desktop apps, physics simulations, Windows API integrations.", lang: "C++" },
+    { year: "Explored", label: "Rust, Java, Flutter, JS", detail: "10-15 Rust projects. 20+ Java Minecraft plugins. Cross-platform mobile with Flutter.", lang: "Multi-language" },
+    { year: "Now", label: "Still building", detail: "Real deployments. Published apps. Hardware. AI. Whatever comes next.", lang: "Everything" },
+];
+
+const skills = [
+    { area: "AI & ML", items: ["Neural Networks", "Reinforcement Learning", "Computer Vision", "OpenAI Whisper", "MediaPipe", "Custom Training Pipelines"] },
+    { area: "Backend & Web", items: ["Flask", "FastAPI", "Socket Programming", "REST APIs", "SSL/HTTPS", "Database Design"] },
+    { area: "Desktop & Systems", items: ["Windows API (C++)", "WinUI3", "tkinter", "WPF", "egui / Slint (Rust)", "System-level programming"] },
+    { area: "Game Dev", items: ["Unity (C#)", "PyGame", "2D/3D Games", "Physics Simulation", "Multiplayer Networking", "Mobile Game Publish"] },
+    { area: "Hardware & IoT", items: ["Arduino Integration", "Bluetooth BLE", "Sensor Reading", "LED Control", "Real-time Audio Processing"] },
+    { area: "Tools & Infrastructure", items: ["OpenCV", "NumPy", "SQLite / JSON / YAML", "Docker concepts", "Git", "Cross-platform deployment"] },
+];
+---
+
+<Layout title="About — Portfolio" description="The developer behind 300+ projects across 10+ languages.">
+    <section class="about-page">
+        <div class="container">
+
+            <div class="about-header">
+                <span class="mono-dim">// about_me.exe</span>
+                <h1 class="about-title">Burak Yılmaz.</h1>
+                <div class="about-age-badge">
+                    <span class="age-number">17</span>
+                    <span class="age-label">years old · Startup Founder · Builder</span>
+                </div>
+                <div class="about-intro">
+                    <p>
+                        I don't build projects to pad a resume. I build because I <em>have</em> to. Because an idea appears
+                        and the only way to quiet it is to make it real. That compulsion has produced 300+ projects across
+                        10+ programming languages, spanning AI, games, systems, hardware, web, and mobile.
+                    </p>
+                    <p>
+                        I've shipped apps to the <strong>Microsoft Store</strong> (95K views, 5K installs). I've built
+                        reinforcement learning from first principles. I've controlled LED strips with clap gestures and
+                        real-time music analysis. I've written Windows kernel-level drivers and Minecraft physics
+                        simulations. I've deployed real school management systems to actual classrooms.
+                    </p>
+                    <p>
+                        The language doesn't matter. The framework doesn't matter. The problem matters. And I build until it's solved.
+                    </p>
+                </div>
+            </div>
+
+            <!-- JOURNEY TIMELINE -->
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="mono-dim">// </span>Journey
+                </h2>
+                <div class="timeline">
+                    {timeline.map((item, i) => (
+                            <div class="timeline-item reveal" style={`transition-delay: ${i * 80}ms`}>
+                                <div class="timeline-year">{item.year}</div>
+                                <div class="timeline-line">
+                                    <div class="timeline-dot"></div>
+                                    {i < timeline.length - 1 && <div class="timeline-connector"></div>}
+                                </div>
+                                <div class="timeline-content">
+                                    <div class="timeline-label">{item.label}</div>
+                                    <div class="timeline-detail">{item.detail}</div>
+                                    <span class="tag">{item.lang}</span>
+                                </div>
+                            </div>
+                    ))}
+                </div>
+            </div>
+
+            <!-- SKILLS GRID -->
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="mono-dim">// </span>Skills
+                </h2>
+                <div class="skills-grid">
+                    {skills.map((skill, i) => (
+                            <div class="skill-card reveal" style={`transition-delay: ${i * 60}ms`}>
+                                <h3 class="skill-area">{skill.area}</h3>
+                                <ul class="skill-list">
+                                    {skill.items.map(item => (
+                                            <li class="skill-item">
+                                                <span class="skill-dot">›</span>
+                                                {item}
+                                            </li>
+                                    ))}
+                                </ul>
+                            </div>
+                    ))}
+                </div>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="contact-section reveal">
+                <div class="contact-inner">
+                    <h2 class="contact-title">Let's connect.</h2>
+                    <p class="contact-text">
+                        Founder, builder, and obsessive creator. If you want to collaborate, invest, or just talk tech — reach out.
+                    </p>
+                    <div class="socials-grid">
+                        <a href="mailto:krbsfrb@gmail.com" class="social-card">
+                            <span class="social-icon">✉</span>
+                            <span class="social-name">Email</span>
+                            <span class="social-handle">krbsfrb@gmail.com</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/burak-y%C4%B1lmaz-336788383/" class="social-card" target="_blank" rel="noopener">
+                            <span class="social-icon">in</span>
+                            <span class="social-name">LinkedIn</span>
+                            <span class="social-handle">Burak Yılmaz</span>
+                        </a>
+                        <a href="https://discord.com/users/579686150663307265" class="social-card" target="_blank" rel="noopener">
+                            <span class="social-icon">#</span>
+                            <span class="social-name">Discord</span>
+                            <span class="social-handle">brksfrb</span>
+                        </a>
+                        <a href="https://www.youtube.com/@brksfrb" class="social-card" target="_blank" rel="noopener">
+                            <span class="social-icon">▶</span>
+                            <span class="social-name">YouTube</span>
+                            <span class="social-handle">brksfrb</span>
+                        </a>
+                        <!--
+                        <a href="https://instagram.com/YOUR_INSTAGRAM" class="social-card" target="_blank" rel="noopener">
+                            <span class="social-icon">◈</span>
+                            <span class="social-name">Instagram</span>
+                            <span class="social-handle">YOUR_INSTAGRAM</span>
+                        </a>
+                        <a href="https://x.com/YOUR_X" class="social-card" target="_blank" rel="noopener">
+                            <span class="social-icon">𝕏</span>
+                            <span class="social-name">X</span>
+                            <span class="social-handle">YOUR_X</span>
+                        </a>
+                        -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</Layout>
+
+<style>
+    .about-page { padding: 4rem 0 6rem; }
+
+    .mono-dim {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        letter-spacing: 0.05em;
+    }
+
+    .about-age-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        padding: 0.75rem 1.5rem;
+        border: 1px solid var(--accent);
+        border-radius: 4px;
+        background: var(--accent-dim);
+    }
+
+    .age-number {
+        font-family: var(--font-mono);
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--accent);
+        text-shadow: var(--glow);
+        line-height: 1;
+    }
+
+    .age-label {
+        font-family: var(--font-mono);
+        font-size: 0.78rem;
+        color: var(--text-dim);
+        letter-spacing: 0.05em;
+    }
+
+    .socials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+    }
+
+    .social-card {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        padding: 1rem 1.25rem;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        background: var(--bg-1);
+        text-decoration: none;
+        transition: all 0.2s;
+    }
+
+    .social-card:hover {
+        border-color: var(--accent);
+        background: var(--surface);
+        transform: translateY(-2px);
+    }
+
+    .social-icon {
+        font-size: 1.1rem;
+        color: var(--accent);
+        font-family: var(--font-mono);
+        margin-bottom: 0.25rem;
+    }
+
+    .social-name {
+        font-family: var(--font-display);
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: var(--text);
+    }
+
+    .social-handle {
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        color: var(--text-muted);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .about-header { margin-bottom: 5rem; }
+
+    .about-title {
+        font-family: var(--font-display);
+        font-size: clamp(3rem, 8vw, 6rem);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        color: var(--text);
+        margin-top: 0.5rem;
+        margin-bottom: 2rem;
+        background: linear-gradient(135deg, var(--text), var(--accent));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .about-intro {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        max-width: 720px;
+    }
+
+    .about-intro p {
+        font-size: 1.05rem;
+        color: var(--text-dim);
+        line-height: 1.85;
+    }
+
+    .about-intro em { color: var(--accent); font-style: normal; font-weight: 600; }
+    .about-intro strong { color: var(--text); font-weight: 600; }
+
+    .section { margin-bottom: 5rem; }
+
+    .section-title {
+        font-family: var(--font-display);
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--text);
+        margin-bottom: 2.5rem;
+        letter-spacing: -0.02em;
+    }
+
+    /* TIMELINE */
+    .timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .timeline-item {
+        display: grid;
+        grid-template-columns: 80px 40px 1fr;
+        gap: 0 1rem;
+        align-items: start;
+    }
+
+    .timeline-year {
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        color: var(--text-muted);
+        text-align: right;
+        padding-top: 0.3rem;
+        letter-spacing: 0.05em;
+    }
+
+    .timeline-line {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline-dot {
+        width: 10px; height: 10px;
+        border: 2px solid var(--accent);
+        border-radius: 50%;
+        background: var(--bg);
+        flex-shrink: 0;
+        margin-top: 0.3rem;
+        box-shadow: 0 0 10px var(--accent-dim);
+    }
+
+    .timeline-connector {
+        width: 1px;
+        background: var(--border);
+        flex: 1;
+        min-height: 2rem;
+    }
+
+    .timeline-content {
+        padding-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+
+    .timeline-label {
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--text);
+    }
+
+    .timeline-detail {
+        font-size: 0.88rem;
+        color: var(--text-dim);
+        line-height: 1.6;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.25rem;
+    }
+
+    .skill-card {
+        padding: 1.5rem;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--surface);
+        transition: all 0.3s;
+    }
+
+    .skill-card:hover {
+        border-color: var(--border-glow);
+        background: var(--surface-2);
+    }
+
+    .skill-area {
+        font-family: var(--font-display);
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--accent);
+        margin-bottom: 1rem;
+        letter-spacing: 0.03em;
+    }
+
+    .skill-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .skill-item {
+        font-family: var(--font-mono);
+        font-size: 0.78rem;
+        color: var(--text-dim);
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .skill-dot { color: var(--accent-2); }
+
+    /* CONTACT */
+    .contact-section { padding: 3rem 0; }
+
+    .contact-inner {
+        border: 1px solid var(--border-glow);
+        border-radius: 12px;
+        padding: 3.5rem;
+        background: var(--surface);
+        background-image: radial-gradient(ellipse at 80% 50%, rgba(0, 255, 136, 0.05), transparent);
+    }
+
+    .contact-title {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        color: var(--text);
+        margin-bottom: 1rem;
+    }
+
+    .contact-text {
+        font-size: 1rem;
+        color: var(--text-dim);
+        max-width: 550px;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+    }
+
+    .contact-actions { display: flex; gap: 1rem; }
+
+    .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--accent);
+        color: var(--bg);
+        padding: 0.8rem 1.8rem;
+        border-radius: 4px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        transition: all 0.3s;
+        text-decoration: none;
+    }
+
+    .btn-primary:hover {
+        background: var(--accent-2);
+        color: var(--bg);
+        box-shadow: 0 0 30px var(--accent-dim);
+        transform: translateY(-2px);
+    }
+</style>

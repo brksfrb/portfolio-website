@@ -1,0 +1,17 @@
+{
+  "id": "tubitak-2024",
+  "competition": "TÜBİTAK",
+  "competitionFull": "TÜBİTAK",
+  "team": "---",
+  "year": 2024,
+  "role": "Member",
+  "result": "National Event",
+  "awards": [
+    "Ticket to National Event"
+  ],
+  "highlights": [
+    "Lungs cancer classification at 99% accuracy"
+  ],
+  "outcome": "Learnt a lot about ML, started writing my own models from then on.",
+  "photos": []
+}

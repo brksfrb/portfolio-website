@@ -1,0 +1,13 @@
+{
+  "id": "virtual-minecraft-env",
+  "title": "Virtual Minecraft Training Environment",
+  "shortDescription": "A custom simulated Minecraft environment for training AI bots efficiently, with full physics parameters.",
+  "description": "Built a fully parameterized virtual Minecraft environment in Python using OOP to train bots without running the actual game. Supports position, rotation, and movement simulation, dramatically reducing training overhead compared to running a live game instance.",
+  "languages": ["Python"],
+  "tags": ["AI", "Simulation", "OOP", "Reinforcement Learning"],
+  "category": "ai",
+  "featured": false,
+  "highlights": ["Decoupled from live game for faster training"],
+  "screenshots": [],
+  "links": {}
+}

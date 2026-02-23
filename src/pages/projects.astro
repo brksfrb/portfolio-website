@@ -1,0 +1,271 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projectFiles = await Astro.glob('../data/projects/*.json');
+const allProjects = projectFiles.map(f => f.default);
+
+const categories = ['all', 'web', 'desktop', 'game', 'ai', 'cv', 'hardware', 'networking', 'mobile', 'plugin'];
+const languages = ['all', 'Python', 'C++', 'C#', 'Rust', 'Java', 'JavaScript', 'Flutter'];
+
+// Count by category and language for display
+const catCounts: Record<string, number> = { all: allProjects.length };
+const langCounts: Record<string, number> = { all: allProjects.length };
+
+allProjects.forEach(p => {
+    catCounts[p.category] = (catCounts[p.category] || 0) + 1;
+    p.languages.forEach((l: string) => {
+        langCounts[l] = (langCounts[l] || 0) + 1;
+    });
+});
+---
+
+<Layout title="All Projects — Portfolio" description="Browse 300+ projects across 10+ languages.">
+    <section class="projects-page">
+        <div class="container">
+            <div class="page-header">
+                <span class="mono-dim">// projects/index</span>
+                <h1 class="page-title">All Projects</h1>
+                <p class="page-sub">
+                    A curated selection of work. The full catalog is 300+ deep across Python, C++, C#, Rust, Unity, Java, and more.
+                </p>
+            </div>
+
+            <!-- FILTERS -->
+            <div class="filters">
+                <div class="filter-group">
+                    <span class="filter-label">Category</span>
+                    <div class="filter-pills" id="cat-filters">
+                        {categories.map(cat => (
+                                <button
+                                        class={`filter-pill ${cat === 'all' ? 'active' : ''}`}
+                                        data-filter="cat"
+                                        data-value={cat}
+                                >
+                                    {cat}
+                                    {catCounts[cat] && <span class="pill-count">{catCounts[cat]}</span>}
+                                </button>
+                        ))}
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-label">Language</span>
+                    <div class="filter-pills" id="lang-filters">
+                        {languages.map(lang => (
+                                <button
+                                        class={`filter-pill ${lang === 'all' ? 'active' : ''}`}
+                                        data-filter="lang"
+                                        data-value={lang}
+                                >
+                                    {lang}
+                                    {langCounts[lang] && <span class="pill-count">{langCounts[lang]}</span>}
+                                </button>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            <!-- RESULTS COUNT -->
+            <div class="results-info">
+                <span class="mono-dim" id="results-count">Showing <span id="count-num">{allProjects.length}</span> projects</span>
+            </div>
+
+            <!-- PROJECTS GRID -->
+            <div class="projects-grid" id="projects-grid">
+                {allProjects.map(project => (
+                        <div
+                                class="project-wrapper"
+                                data-category={project.category}
+                                data-languages={JSON.stringify(project.languages)}
+                        >
+                            <ProjectCard project={project} featured={project.featured ?? false} />
+                        </div>
+                ))}
+            </div>
+
+            <!-- EMPTY STATE -->
+            <div class="empty-state" id="empty-state" style="display:none">
+                <span class="empty-icon">⚡</span>
+                <p>No projects match these filters. Try a different combination.</p>
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<script>
+    let activeCat = 'all';
+    let activeLang = 'all';
+
+    function applyFilters() {
+        const wrappers = document.querySelectorAll<HTMLElement>('.project-wrapper');
+        let visible = 0;
+
+        wrappers.forEach(el => {
+            const cat = el.dataset.category || '';
+            const langs = JSON.parse(el.dataset.languages || '[]') as string[];
+            const catMatch = activeCat === 'all' || cat === activeCat;
+            const langMatch = activeLang === 'all' || langs.includes(activeLang);
+            const show = catMatch && langMatch;
+            el.style.display = show ? '' : 'none';
+            if (show) visible++;
+        });
+
+        const countEl = document.getElementById('count-num');
+        if (countEl) countEl.textContent = String(visible);
+
+        const emptyState = document.getElementById('empty-state');
+        if (emptyState) emptyState.style.display = visible === 0 ? 'flex' : 'none';
+    }
+
+    document.querySelectorAll<HTMLButtonElement>('.filter-pill').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const filterType = btn.dataset.filter!;
+            const value = btn.dataset.value!;
+
+            // Update active state
+            document.querySelectorAll<HTMLButtonElement>(`.filter-pill[data-filter="${filterType}"]`).forEach(b => {
+                b.classList.remove('active');
+            });
+            btn.classList.add('active');
+
+            if (filterType === 'cat') activeCat = value;
+            else activeLang = value;
+
+            applyFilters();
+        });
+    });
+</script>
+
+<style>
+    .projects-page { padding: 4rem 0; }
+
+    .page-header { margin-bottom: 3rem; }
+
+    .page-title {
+        font-family: var(--font-display);
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-weight: 800;
+        color: var(--text);
+        letter-spacing: -0.02em;
+        margin-top: 0.5rem;
+    }
+
+    .page-sub {
+        font-size: 1rem;
+        color: var(--text-dim);
+        margin-top: 0.75rem;
+        max-width: 600px;
+        line-height: 1.7;
+    }
+
+    .mono-dim {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        letter-spacing: 0.05em;
+    }
+
+    .filters {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+    }
+
+    .filter-group {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .filter-label {
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        min-width: 70px;
+        flex-shrink: 0;
+    }
+
+    .filter-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+    }
+
+    .filter-pill {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        padding: 0.3rem 0.8rem;
+        border: 1px solid var(--border);
+        background: transparent;
+        color: var(--text-dim);
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        text-transform: capitalize;
+        letter-spacing: 0.03em;
+    }
+
+    .filter-pill:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+    }
+
+    .filter-pill.active {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: var(--accent-dim);
+    }
+
+    .pill-count {
+        font-size: 0.65rem;
+        color: var(--text-muted);
+        background: var(--bg-2);
+        padding: 0 0.3rem;
+        border-radius: 2px;
+    }
+
+    .filter-pill.active .pill-count {
+        color: var(--accent);
+        background: rgba(0, 212, 255, 0.1);
+    }
+
+    .results-info {
+        margin-bottom: 1.5rem;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.25rem;
+        align-items: stretch;
+    }
+
+    .project-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .empty-state {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 4rem;
+        color: var(--text-muted);
+        font-family: var(--font-mono);
+        font-size: 0.9rem;
+    }
+
+    .empty-icon { font-size: 2rem; }
+</style>

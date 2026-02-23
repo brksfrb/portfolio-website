@@ -1,0 +1,13 @@
+{
+  "id": "desktop-gravity",
+  "title": "Desktop Gravity",
+  "shortDescription": "Applies real-time physics gravity to your desktop icons — they fall, stack, and collide.",
+  "description": "A C++ system-level application that hooks into the Windows desktop and applies simulated gravity to all desktop icons. Icons fall, collide with each other and the taskbar, and stack realistically using physics calculations.",
+  "languages": ["C++"],
+  "tags": ["Windows API", "Physics", "System", "Desktop", "C++"],
+  "category": "desktop",
+  "featured": false,
+  "highlights": ["Real-time physics simulation", "Windows system-level API integration"],
+  "screenshots": [],
+  "links": {}
+}

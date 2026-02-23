@@ -1,0 +1,19 @@
+{
+  "id": "ai-from-scratch",
+  "title": "AI & Reinforcement Learning From Scratch",
+  "shortDescription": "Built machine learning and reinforcement learning engines from scratch — no libraries — for maximum performance.",
+  "description": "Implemented machine learning and reinforcement learning algorithms entirely from scratch in Python, without using high-level ML libraries. The goal was achieving higher performance and deeper understanding by controlling every layer of computation.",
+  "languages": ["Python"],
+  "tags": ["Machine Learning", "Reinforcement Learning", "AI", "From Scratch", "Performance"],
+  "category": "ai",
+  "featured": true,
+  "featuredOrder": 3,
+  "highlights": [
+    "No ML library dependencies",
+    "Custom gradient descent & backpropagation",
+    "Reinforcement learning from first principles"
+  ],
+  "screenshots": ["ai_from_scratch.png"],
+  "links": {},
+  "reason": "Ever wanted to build an AI inside Minecraft? Well I did, but the existing libraries took seconds to pass an epoch even on a high-end PC. So I knew what I had to do, I wrote my own library which can train at hundreds of epochs/second. Not for general purposes, purely for this project."
+}

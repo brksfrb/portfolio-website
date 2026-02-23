@@ -1,0 +1,202 @@
+---
+interface Props {
+    title?: string;
+    description?: string;
+}
+const { title = "Portfolio", description = "Developer portfolio" } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="/favicon.ico" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/styles/global.css" />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://brksfrb.com/og.png" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://brksfrb.com/og.png" />
+</head>
+<body>
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">
+            <span class="logo-bracket">[</span>
+            <span class="logo-text">brksfrb</span>
+            <span class="logo-bracket">]</span>
+            <span class="cursor">_</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/robotics">Robotics</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <slot />
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <p class="footer-text">
+                <span class="mono">// </span>
+                <span class="accent">Burak Yılmaz</span>
+                <span class="mono"> · 17 · Startup Founder</span>
+            </p>
+            <div class="footer-socials">
+                <a href="mailto:krbsfrb@gmail.com" class="footer-link">Email</a>
+                <a href="https://www.linkedin.com/in/burak-y%C4%B1lmaz-336788383/" class="footer-link" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://discord.com/users/579686150663307265" class="footer-link" target="_blank" rel="noopener">Discord</a>
+                <a href="https://youtube.com/@brksfrb" class="footer-link" target="_blank" rel="noopener">YouTube</a>
+                <!--<a href="https://instagram.com/YOUR_INSTAGRAM" class="footer-link" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://x.com/YOUR_X" class="footer-link" target="_blank" rel="noopener">X</a>-->
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Intersection Observer for reveal animations
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => entry.target.classList.add('visible'), i * 80);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
+
+<style>
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        background: rgba(3, 5, 8, 0.85);
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 64px;
+    }
+
+    .nav-logo {
+        font-family: var(--font-mono);
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        letter-spacing: 0.1em;
+    }
+
+    .logo-bracket { color: var(--accent); }
+    .logo-text { color: var(--text); }
+
+    .cursor {
+        color: var(--accent-2);
+        animation: blink 1s step-end infinite;
+        margin-left: 1px;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    .nav-links a {
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+        color: var(--text-dim);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        transition: color 0.2s;
+        position: relative;
+    }
+
+    .nav-links a::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: var(--accent);
+        transition: width 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: var(--accent);
+    }
+
+    .nav-links a:hover::after { width: 100%; }
+
+    main { padding-top: 64px; min-height: calc(100vh - 120px); }
+
+    .footer {
+        border-top: 1px solid var(--border);
+        padding: 2rem 0;
+        margin-top: 6rem;
+    }
+
+    .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .footer-text {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+    }
+
+    .footer-socials {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .footer-link {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--text-muted);
+        text-decoration: none;
+        letter-spacing: 0.05em;
+        transition: color 0.2s;
+    }
+
+    .footer-link:hover { color: var(--accent); }
+
+    .mono { font-family: var(--font-mono); }
+    .accent { color: var(--accent); }
+</style>

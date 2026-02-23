@@ -1,0 +1,13 @@
+{
+  "id": "zombie-craft",
+  "title": "Zombie Craft",
+  "shortDescription": "An open-world 3D survival game with crafting, resource collection, and enemy AI — built in Unity.",
+  "description": "A fully featured open-world 3D survival game built in Unity with C#. Features crafting systems, resource gathering, enemy AI logic, and day/night survival mechanics.",
+  "languages": ["C#"],
+  "tags": ["Unity", "3D", "Survival", "Crafting", "Enemy AI"],
+  "category": "game",
+  "featured": false,
+  "highlights": ["Full crafting system", "Open world with enemy logic"],
+  "screenshots": [],
+  "links": {}
+}

@@ -1,0 +1,587 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import Stats from '../components/Stats.astro';
+
+// Load all project JSON files
+const projectFiles = await Astro.glob('../data/projects/*.json');
+const allProjects = projectFiles.map(f => f.default);
+
+// Featured projects sorted by featuredOrder
+const featuredProjects = allProjects
+    .filter(p => p.featured)
+    .sort((a, b) => (a.featuredOrder ?? 99) - (b.featuredOrder ?? 99));
+
+const languages = [
+    { name: 'Python', count: '300+', color: '#4a9eda' },
+    { name: 'C++', count: '15-20', color: '#9b74ca' },
+    { name: 'C#', count: '50+', color: '#4aab3a' },
+    { name: 'Unity', count: '50+', color: '#eeeeee' },
+    { name: 'Rust', count: '10-15', color: '#e07a3a' },
+    { name: 'Java', count: '20+', color: '#e09a49' },
+    { name: 'JavaScript', count: '15-20', color: '#c5b33a' },
+    { name: 'Flutter', count: '5', color: '#3ecfef' },
+    { name: 'HTML/CSS', count: '20+', color: '#e06a3a' },
+];
+---
+
+<Layout title="Portfolio — Developer" description="Full-stack developer with 300+ projects across 10+ languages.">
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+            <div class="hero-glow-1"></div>
+            <div class="hero-glow-2"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-label">
+                <span class="label-dot"></span>
+                <span class="label-text">Burak Yılmaz · 17 years old · Developer & Entrepreneur</span>
+            </div>
+
+            <div class="hero-title-wrap">
+                <h1 class="hero-title">
+                    <span class="title-line-1">Full-Stack</span>
+                    <span class="title-line-2">
+            <span class="glitch-wrap">
+              <span class="title-accent" data-text="Developer">Developer</span>
+              <span class="glitch-layer" aria-hidden="true">Developer</span>
+            </span>
+          </span>
+                    <span class="title-line-3">& Engineer</span>
+                </h1>
+            </div>
+
+            <div class="hero-stats-row">
+                <div class="hero-stat">
+                    <span class="hero-stat-value">17</span>
+                    <span class="hero-stat-label">years old</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-value">300+</span>
+                    <span class="hero-stat-label">total projects</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-value">10+</span>
+                    <span class="hero-stat-label">languages</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-value">5K+</span>
+                    <span class="hero-stat-label">app installs</span>
+                </div>
+            </div>
+
+            <p class="hero-desc">
+                From shipping apps on the <strong>Microsoft Store</strong> and <strong>PlayStore</strong> to building
+                reinforcement learning engines from scratch, custom Windows system apps, hardware LED controllers,
+                Minecraft bots, and real-world school management systems deployed in classrooms —
+                this is what obsessive building looks like.
+            </p>
+
+            <div class="hero-actions">
+                <a href="/projects" class="btn-primary">
+                    <span>View All Projects</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a href="/about" class="btn-ghost">About Me</a>
+            </div>
+
+            <div class="terminal-ticker">
+                <span class="ticker-prefix">$ ls ~/projects | wc -l</span>
+                <span class="ticker-value">300+</span>
+                <span class="ticker-cursor">▋</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <Stats />
+
+    <!-- LANGUAGES STRIP -->
+    <section class="languages-section">
+        <div class="container">
+            <div class="section-label">
+                <span class="mono-dim">// languages & ecosystems</span>
+            </div>
+            <div class="lang-strip">
+                {languages.map(lang => (
+                        <div class="lang-item" style={`--lang-color: ${lang.color}`}>
+                            <span class="lang-name">{lang.name}</span>
+                            <span class="lang-count">{lang.count} projects</span>
+                        </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">
+                    <span class="mono-dim">// featured_projects.filter(p =&gt; p.highlight)</span>
+                </div>
+                <h2 class="section-title">Selected Work</h2>
+                <p class="section-sub">Hand-picked from 300+ projects. Built for real users, real problems.</p>
+            </div>
+
+            <div class="featured-grid">
+                {featuredProjects.map((project, i) => (
+                        <ProjectCard project={project} featured={true} />
+                ))}
+            </div>
+
+            <div class="view-all-wrap">
+                <a href="/projects" class="view-all-link">
+                    <span class="mono-dim">See all</span> 300+ projects
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHILOSOPHY / CALL TO ACTION -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-inner reveal">
+                <div class="cta-glitch-bg"></div>
+                <div class="cta-content">
+                    <span class="cta-tag">// about the builder</span>
+                    <h2 class="cta-title">Built different.<br/>Ships obsessively.</h2>
+                    <p class="cta-text">
+                        Not just a developer — a builder who doesn't stop. 300+ Python projects. 50+ Unity games.
+                        Published apps. Real deployments. Hardware integrations. ML from first principles.
+                        The number of languages isn't the point — the compulsive need to build anything imaginable is.
+                    </p>
+                    <a href="/about" class="btn-primary">Get in touch →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    /* HERO */
+    .hero {
+        position: relative;
+        min-height: 95vh;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .hero-bg {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+    }
+
+    .hero-grid {
+        position: absolute;
+        inset: 0;
+        background-image:
+                linear-gradient(rgba(0, 212, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 212, 255, 0.04) 1px, transparent 1px);
+        background-size: 60px 60px;
+        mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+    }
+
+    .hero-glow-1 {
+        position: absolute;
+        top: -20%;
+        left: -10%;
+        width: 60%;
+        height: 80%;
+        background: radial-gradient(ellipse, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
+        animation: float 8s ease-in-out infinite;
+    }
+
+    .hero-glow-2 {
+        position: absolute;
+        bottom: -10%;
+        right: -5%;
+        width: 50%;
+        height: 60%;
+        background: radial-gradient(ellipse, rgba(0, 255, 136, 0.06) 0%, transparent 70%);
+        animation: float 10s ease-in-out infinite reverse;
+    }
+
+    .hero-content {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        position: relative;
+        z-index: 1;
+        max-width: 900px;
+    }
+
+    .hero-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--accent-2);
+        border: 1px solid var(--accent-2);
+        padding: 0.3rem 0.8rem;
+        border-radius: 2px;
+        margin-bottom: 2rem;
+        animation: fadeUp 0.6s ease both;
+        letter-spacing: 0.08em;
+    }
+
+    .label-dot {
+        width: 6px; height: 6px;
+        background: var(--accent-2);
+        border-radius: 50%;
+        animation: scanPulse 2s ease-in-out infinite;
+    }
+
+    .hero-title-wrap {
+        margin-bottom: 1.5rem;
+        animation: fadeUp 0.6s 0.1s ease both;
+    }
+
+    .hero-title {
+        font-family: var(--font-display);
+        font-weight: 800;
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+    }
+
+    .title-line-1 {
+        display: block;
+        font-size: clamp(3rem, 8vw, 6rem);
+        color: var(--text);
+    }
+
+    .title-line-2 {
+        display: block;
+        font-size: clamp(3rem, 8vw, 6rem);
+    }
+
+    .title-line-3 {
+        display: block;
+        font-size: clamp(3rem, 8vw, 6rem);
+        color: var(--text-dim);
+    }
+
+    .glitch-wrap {
+        position: relative;
+        display: inline-block;
+    }
+
+    .title-accent {
+        background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .glitch-layer {
+        position: absolute;
+        top: 0; left: 0;
+        background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: glitch 6s 3s infinite;
+        opacity: 0.7;
+    }
+
+    .hero-stats-row {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        animation: fadeUp 0.6s 0.2s ease both;
+    }
+
+    .hero-stat {
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+    }
+
+    .hero-stat-value {
+        font-family: var(--font-mono);
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--accent);
+        text-shadow: var(--glow);
+        line-height: 1;
+    }
+
+    .hero-stat-label {
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        color: var(--text-muted);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    .hero-stat-divider {
+        width: 1px;
+        height: 36px;
+        background: var(--border);
+        flex-shrink: 0;
+    }
+
+    .hero-sub {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+        color: var(--text-dim);
+        margin-bottom: 1.5rem;
+        animation: fadeUp 0.6s 0.2s ease both;
+        flex-wrap: wrap;
+    }
+
+    .mono-label { color: var(--accent); }
+    .sep { color: var(--text-muted); }
+
+    .hero-desc {
+        font-size: 1.05rem;
+        color: var(--text-dim);
+        max-width: 650px;
+        line-height: 1.8;
+        margin-bottom: 2.5rem;
+        animation: fadeUp 0.6s 0.3s ease both;
+    }
+
+    .hero-desc strong { color: var(--text); font-weight: 600; }
+
+    .hero-actions {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+        animation: fadeUp 0.6s 0.4s ease both;
+    }
+
+    .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--accent);
+        color: var(--bg);
+        padding: 0.8rem 1.8rem;
+        border-radius: 4px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        letter-spacing: 0.03em;
+        transition: all 0.3s;
+        text-decoration: none;
+    }
+
+    .btn-primary:hover {
+        background: var(--accent-2);
+        color: var(--bg);
+        box-shadow: 0 0 30px var(--accent-dim), 0 4px 20px rgba(0,0,0,0.3);
+        transform: translateY(-2px);
+    }
+
+    .btn-arrow { transition: transform 0.2s; }
+    .btn-primary:hover .btn-arrow { transform: translateX(4px); }
+
+    .btn-ghost {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.8rem 1.8rem;
+        border: 1px solid var(--border);
+        color: var(--text-dim);
+        border-radius: 4px;
+        font-size: 0.9rem;
+        transition: all 0.3s;
+        text-decoration: none;
+    }
+
+    .btn-ghost:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+    }
+
+    .terminal-ticker {
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        animation: fadeUp 0.6s 0.5s ease both;
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+    }
+
+    .ticker-prefix { color: var(--text-muted); }
+    .ticker-value { color: var(--accent-2); font-weight: 700; }
+    .ticker-cursor { color: var(--accent); animation: blink 1s step-end infinite; }
+
+    /* LANGUAGES */
+    .languages-section {
+        padding: 4rem 0;
+    }
+
+    .section-label {
+        margin-bottom: 1.5rem;
+    }
+
+    .mono-dim {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        letter-spacing: 0.05em;
+    }
+
+    .lang-strip {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .lang-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.15rem;
+        padding: 0.75rem 1.25rem;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        border-left: 3px solid var(--lang-color, var(--accent));
+        background: var(--surface);
+        transition: all 0.2s;
+    }
+
+    .lang-item:hover {
+        background: var(--surface-2);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .lang-name {
+        font-family: var(--font-display);
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: var(--lang-color, var(--text));
+    }
+
+    .lang-count {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        color: var(--text-muted);
+    }
+
+    /* FEATURED */
+    .featured-section {
+        padding: 5rem 0;
+    }
+
+    .section-header {
+        margin-bottom: 3rem;
+    }
+
+    .section-title {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 800;
+        color: var(--text);
+        margin-top: 0.5rem;
+        letter-spacing: -0.02em;
+    }
+
+    .section-sub {
+        color: var(--text-dim);
+        font-size: 0.95rem;
+        margin-top: 0.5rem;
+    }
+
+    .featured-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    @media (max-width: 700px) {
+        .featured-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .view-all-wrap {
+        margin-top: 2.5rem;
+        text-align: center;
+    }
+
+    .view-all-link {
+        font-family: var(--font-display);
+        font-size: 1rem;
+        color: var(--text-dim);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 4px;
+        transition: all 0.2s;
+    }
+
+    .view-all-link:hover {
+        color: var(--accent);
+        border-color: var(--accent);
+    }
+
+    .view-all-link .arrow { transition: transform 0.2s; }
+    .view-all-link:hover .arrow { transform: translateX(4px); }
+
+    /* CTA */
+    .cta-section { padding: 5rem 0; }
+
+    .cta-inner {
+        position: relative;
+        border: 1px solid var(--border-glow);
+        border-radius: 12px;
+        padding: 4rem;
+        overflow: hidden;
+        background: var(--surface);
+    }
+
+    .cta-glitch-bg {
+        position: absolute;
+        inset: 0;
+        background:
+                radial-gradient(ellipse 60% 60% at 80% 50%, rgba(0,255,136,0.06), transparent),
+                radial-gradient(ellipse 60% 60% at 20% 50%, rgba(0,212,255,0.06), transparent);
+        pointer-events: none;
+    }
+
+    .cta-content { position: relative; z-index: 1; }
+
+    .cta-tag {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .cta-title {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 800;
+        color: var(--text);
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-text {
+        color: var(--text-dim);
+        font-size: 1rem;
+        max-width: 600px;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+    }
+</style>

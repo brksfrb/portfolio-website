@@ -1,0 +1,18 @@
+{
+  "id": "bluetooth-led-controller",
+  "title": "Bluetooth LED Controller",
+  "shortDescription": "Controls LED strips via Bluetooth with clap detection, music sync, and screen color mirroring.",
+  "description": "A hardware-software integration project that controls LED strips over Bluetooth with multiple smart modes: clap-to-change-color using audio processing, real-time music reactive lighting, and screen color mirroring that samples your display and reflects its average color onto the LEDs.",
+  "languages": ["Python"],
+  "tags": ["Hardware", "Bluetooth", "Audio Processing", "OpenCV", "IoT"],
+  "category": "hardware",
+  "featured": false,
+  "featuredOrder": 4,
+  "highlights": [
+    "Clap detection to change colors",
+    "Real-time music reactive lighting",
+    "Screen color mirroring mode"
+  ],
+  "screenshots": [],
+  "links": {}
+}

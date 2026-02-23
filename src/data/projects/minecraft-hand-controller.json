@@ -1,0 +1,13 @@
+{
+  "id": "minecraft-from-camera",
+  "title": "Minecraft Hand Controller",
+  "shortDescription": "Play Minecraft using only your hands via webcam — gesture-based full game control.",
+  "description": "Uses OpenCV and MediaPipe to detect hand gestures in real time from a webcam feed, mapping finger positions and movements to Minecraft game controls. Allows complete gameplay without a keyboard or mouse.",
+  "languages": ["Python"],
+  "tags": ["OpenCV", "MediaPipe", "Computer Vision", "Gesture Control"],
+  "category": "cv",
+  "featured": false,
+  "highlights": ["Full game control via hand gestures", "Real-time MediaPipe landmark detection"],
+  "screenshots": [],
+  "links": {}
+}

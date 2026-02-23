@@ -1,0 +1,516 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const seasonFiles = await Astro.glob('../data/robotics/*.json');
+const allSeasons = seasonFiles
+    .map(f => f.default)
+    .sort((a, b) => b.year - a.year);
+
+// Group by competition
+const competitions: Record<string, any[]> = {};
+allSeasons.forEach(s => {
+    if (!competitions[s.competition]) competitions[s.competition] = [];
+    competitions[s.competition].push(s);
+});
+
+const competitionMeta: Record<string, { full: string; description: string; color: string; icon: string }> = {
+    FRC: {
+        full: "FIRST Robotics Competition",
+        description: "The premier high school robotics competition. 6-week build season, regional and world-level events.",
+        color: "#00d4ff",
+        icon: "⚙️",
+    },
+    FTC: {
+        full: "FIRST Tech Challenge",
+        description: "High school robotics competition focused on engineering design and programming.",
+        color: "#00ff88",
+        icon: "🔧",
+    },
+    FLL: {
+        full: "FIRST LEGO League",
+        description: "Junior robotics competition combining LEGO building, programming, and research projects.",
+        color: "#f0a500",
+        icon: "🧱",
+    },
+};
+---
+
+<Layout title="Robotics — Portfolio" description="FRC, FTC, and FLL experience across multiple seasons.">
+    <section class="robotics-page">
+        <div class="container">
+
+            <div class="page-header">
+                <span class="mono-dim">// robotics & competitions</span>
+                <h1 class="page-title">Robotics</h1>
+                <p class="page-sub">
+                    Years of experience across FRC, FTC, and FLL — as a competitor, captain, drive team member, and mentor.
+                    Hardware, software, leadership, and pressure all in one.
+                </p>
+            </div>
+
+            <!-- COMPETITION SECTIONS -->
+            {Object.entries(competitions).map(([comp, seasons]) => {
+                const meta = competitionMeta[comp] || { full: comp, description: '', color: '#00d4ff', icon: '🤖' };
+                return (
+                        <div class="competition-block" style={`--comp-color: ${meta.color}`}>
+                            <div class="competition-header reveal">
+                                <div class="comp-icon">{meta.icon}</div>
+                                <div class="comp-info">
+                                    <div class="comp-badges">
+                                        <span class="comp-short">{comp}</span>
+                                        <span class="comp-seasons-count">{seasons.length} season{seasons.length > 1 ? 's' : ''}</span>
+                                    </div>
+                                    <h2 class="comp-title">{meta.full}</h2>
+                                    <p class="comp-desc">{meta.description}</p>
+                                </div>
+                            </div>
+
+                            <div class="seasons-list">
+                                {seasons.map((season, i) => (
+                                        <div class="season-card reveal" style={`transition-delay: ${i * 80}ms`}>
+                                            <div class="season-sidebar">
+                                                <div class="season-year">{season.year}</div>
+                                                <div class="season-line"></div>
+                                            </div>
+                                            <div class="season-content">
+                                                <div class="season-top">
+                                                    <div class="season-left">
+                                                        <h3 class="season-team">{season.team}</h3>
+                                                        <span class="season-role">{season.role}</span>
+                                                    </div>
+                                                    {season.result && (
+                                                            <span class="season-result">{season.result}</span>
+                                                    )}
+                                                </div>
+
+                                                {season.awards && season.awards.length > 0 && (
+                                                        <div class="season-awards">
+                                                            {season.awards.map((award: string) => (
+                                                                    <span class="award-badge">🏆 {award}</span>
+                                                            ))}
+                                                        </div>
+                                                )}
+
+                                                {season.highlights && season.highlights.length > 0 && (
+                                                        <ul class="season-highlights">
+                                                            {season.highlights.map((h: string) => (
+                                                                    <li class="season-highlight">
+                                                                        <span class="highlight-arrow">›</span>
+                                                                        {h}
+                                                                    </li>
+                                                            ))}
+                                                        </ul>
+                                                )}
+
+                                                {season.outcome && (
+                                                        <div class="season-outcome">
+                                                            <span class="outcome-label">// outcome</span>
+                                                            <p class="outcome-text">{season.outcome}</p>
+                                                        </div>
+                                                )}
+
+                                                {season.photos && season.photos.length > 0 && (
+                                                        <div class="season-photos">
+                                                            {season.photos.map((src: string, pi: number) => (
+                                                                    <div class="photo-wrap" data-src={src.startsWith('http') ? src : `/robotics/${src}`}>
+                                                                        <img
+                                                                                src={src.startsWith('http') ? src : `/robotics/${src}`}
+                                                                                alt={`${season.team} ${season.year} photo ${pi + 1}`}
+                                                                                class="season-photo"
+                                                                                loading="lazy"
+                                                                        />
+                                                                    </div>
+                                                            ))}
+                                                        </div>
+                                                )}
+                                            </div>
+                                        </div>
+                                ))}
+                            </div>
+                        </div>
+                );
+            })}
+
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close">✕</button>
+        <div class="lightbox-img-wrap">
+            <img src="" alt="" id="lightbox-img" />
+        </div>
+    </div>
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+</Layout>
+
+<script>
+    const photos = document.querySelectorAll<HTMLElement>('.photo-wrap');
+    const lightbox = document.getElementById('lightbox')!;
+    const backdrop = document.getElementById('lightbox-backdrop')!;
+    const lbImg = document.getElementById('lightbox-img') as HTMLImageElement;
+    const lbClose = document.getElementById('lightbox-close')!;
+
+    photos.forEach(el => {
+        el.addEventListener('click', () => {
+            lbImg.src = el.dataset.src!;
+            lightbox.classList.add('active');
+            backdrop.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    function close() {
+        lightbox.classList.remove('active');
+        backdrop.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    lbClose.addEventListener('click', close);
+    backdrop.addEventListener('click', close);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+</script>
+
+<style>
+    .robotics-page { padding: 4rem 0 6rem; }
+
+    .mono-dim {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        letter-spacing: 0.05em;
+    }
+
+    .page-header { margin-bottom: 4rem; }
+
+    .page-title {
+        font-family: var(--font-display);
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-weight: 800;
+        color: var(--text);
+        letter-spacing: -0.02em;
+        margin-top: 0.5rem;
+    }
+
+    .page-sub {
+        font-size: 1rem;
+        color: var(--text-dim);
+        margin-top: 0.75rem;
+        max-width: 620px;
+        line-height: 1.7;
+    }
+
+    /* COMPETITION BLOCK */
+    .competition-block {
+        margin-bottom: 5rem;
+        padding-bottom: 5rem;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .competition-block:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .competition-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+        padding: 2rem;
+        border: 1px solid var(--comp-color, var(--border));
+        border-radius: 8px;
+        background: var(--surface);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .competition-header::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 2px;
+        background: var(--comp-color, var(--accent));
+    }
+
+    .comp-icon { font-size: 2.5rem; flex-shrink: 0; }
+
+    .comp-badges {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .comp-short {
+        font-family: var(--font-mono);
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--comp-color, var(--accent));
+        border: 1px solid var(--comp-color, var(--accent));
+        padding: 0.2rem 0.6rem;
+        border-radius: 3px;
+        letter-spacing: 0.1em;
+    }
+
+    .comp-seasons-count {
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        color: var(--text-muted);
+    }
+
+    .comp-title {
+        font-family: var(--font-display);
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: var(--text);
+        letter-spacing: -0.01em;
+        margin-bottom: 0.4rem;
+    }
+
+    .comp-desc {
+        font-size: 0.88rem;
+        color: var(--text-dim);
+        line-height: 1.6;
+    }
+
+    /* SEASON CARD */
+    .seasons-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        padding-left: 1rem;
+    }
+
+    .season-card {
+        display: grid;
+        grid-template-columns: 60px 1fr;
+        gap: 1.5rem;
+        align-items: start;
+    }
+
+    .season-sidebar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1.5rem;
+    }
+
+    .season-year {
+        font-family: var(--font-mono);
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--comp-color, var(--accent));
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        transform: rotate(180deg);
+        letter-spacing: 0.1em;
+    }
+
+    .season-line {
+        width: 1px;
+        flex: 1;
+        min-height: 40px;
+        background: linear-gradient(to bottom, var(--comp-color, var(--accent)), transparent);
+        margin-top: 0.5rem;
+        opacity: 0.4;
+    }
+
+    .season-content {
+        padding: 1.5rem;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--surface);
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        transition: border-color 0.3s;
+    }
+
+    .season-content:hover {
+        border-color: var(--comp-color, var(--border-glow));
+    }
+
+    .season-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .season-team {
+        font-family: var(--font-display);
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 0.25rem;
+    }
+
+    .season-role {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--comp-color, var(--accent));
+        letter-spacing: 0.05em;
+    }
+
+    .season-result {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--accent-2);
+        border: 1px solid var(--accent-2);
+        padding: 0.25rem 0.75rem;
+        border-radius: 3px;
+        white-space: nowrap;
+        background: var(--accent-2-dim);
+    }
+
+    .season-awards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .award-badge {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: #f0a500;
+        border: 1px solid #f0a50044;
+        background: #f0a50011;
+        padding: 0.25rem 0.75rem;
+        border-radius: 3px;
+    }
+
+    .season-highlights {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .season-highlight {
+        font-family: var(--font-mono);
+        font-size: 0.78rem;
+        color: var(--text-dim);
+        display: flex;
+        gap: 0.5rem;
+        align-items: flex-start;
+        line-height: 1.5;
+    }
+
+    .highlight-arrow {
+        color: var(--comp-color, var(--accent));
+        flex-shrink: 0;
+    }
+
+    .season-outcome {
+        border-top: 1px solid var(--border);
+        padding-top: 1rem;
+    }
+
+    .outcome-label {
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        color: var(--text-muted);
+        display: block;
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.05em;
+    }
+
+    .outcome-text {
+        font-size: 0.9rem;
+        color: var(--text-dim);
+        line-height: 1.7;
+        font-style: italic;
+    }
+
+    /* PHOTOS */
+    .season-photos {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 0.75rem;
+    }
+
+    .photo-wrap {
+        border-radius: 6px;
+        overflow: hidden;
+        cursor: pointer;
+        aspect-ratio: 16/9;
+        border: 1px solid var(--border);
+        transition: all 0.3s;
+    }
+
+    .photo-wrap:hover {
+        border-color: var(--comp-color, var(--accent));
+        transform: translateY(-2px);
+    }
+
+    .season-photo {
+        width: 100%; height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s;
+    }
+
+    .photo-wrap:hover .season-photo { transform: scale(1.04); }
+
+    /* LIGHTBOX */
+    .lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+    }
+
+    .lightbox.active { opacity: 1; pointer-events: all; }
+
+    .lightbox-backdrop {
+        position: fixed;
+        inset: 0;
+        z-index: 999;
+        background: rgba(0,0,0,0.92);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+        backdrop-filter: blur(6px);
+    }
+
+    .lightbox-backdrop.active { opacity: 1; pointer-events: all; }
+
+    .lightbox-img-wrap { position: relative; z-index: 1001; }
+
+    #lightbox-img {
+        max-width: 90vw;
+        max-height: 88vh;
+        object-fit: contain;
+        border-radius: 6px;
+        border: 1px solid var(--border);
+        box-shadow: 0 0 60px rgba(0,0,0,0.8);
+    }
+
+    .lightbox-close {
+        position: fixed;
+        top: 1.5rem; right: 1.5rem;
+        z-index: 1002;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        color: var(--text);
+        cursor: pointer;
+        border-radius: 4px;
+        padding: 0.5rem 0.8rem;
+        font-size: 1rem;
+        transition: all 0.2s;
+    }
+
+    .lightbox-close:hover { border-color: var(--accent); color: var(--accent); }
+
+    @media (max-width: 600px) {
+        .season-card { grid-template-columns: 40px 1fr; gap: 1rem; }
+        .season-year { font-size: 0.65rem; }
+    }
+</style>

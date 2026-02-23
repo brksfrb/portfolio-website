@@ -1,0 +1,13 @@
+{
+  "id": "telegram-pc-bot",
+  "title": "Telegram PC Automation Bot",
+  "shortDescription": "Control and automate your PC remotely through a personal Telegram bot.",
+  "description": "A Python bot that connects to Telegram and allows full remote PC automation — running commands, triggering scripts, monitoring status, and receiving notifications — all from a phone.",
+  "languages": ["Python"],
+  "tags": ["Telegram", "Automation", "Remote Control", "Bot"],
+  "category": "desktop",
+  "featured": false,
+  "highlights": ["Full remote PC control via phone", "Script triggering & notifications"],
+  "screenshots": [],
+  "links": {}
+}
