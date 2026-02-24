@@ -1,0 +1,14 @@
+{
+  "id": "minecraft-holographic-text-plugin",
+  "title": "Minecraft Holographic Text Plugin",
+  "shortDescription": "Getting Minecraft world to talk by adding holograms everywhere!",
+  "description": "A Java-based Minecraft plugin implementing a new decoration system to the game. Full command-line tools for teleporting holograms, renaming them, editing text of them, changing color of text and much more.",
+  "languages": ["Java"],
+  "tags": ["Minecraft", "Plugin", "Java", "Decoration", "Server"],
+  "category": "plugin",
+  "featured": false,
+  "highlights": ["New decorations", "Full command interface", "Scalable"],
+  "screenshots": [],
+  "links": {},
+  "reason": "I needed a better decoration/explanation than signs for my Minecraft server. That's when I built this plugin to help me do that."
+}

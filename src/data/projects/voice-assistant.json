@@ -1,0 +1,14 @@
+{
+  "id": "voice-assistant",
+  "title": "Voice Assistant",
+  "shortDescription": "Personal voice assistant which wakes up on a pre-defined wake-word.",
+  "description": "Personal voice assistant with wake-word detection and various commands such as opening apps, telling date & time, setting system volume and stuff. It was built using vosk library for classification & fuzzy matching, pvporcupine for wake-word detection.",
+  "languages": ["Python"],
+  "tags": ["Desktop", "Voice Assistant", "Machine Learning", "AI"],
+  "category": "ai",
+  "featured": false,
+  "highlights": ["Real-time command activation", "Extremely low latency at a few hundred milliseconds", "Executes commands as you talk"],
+  "screenshots": [],
+  "links": {},
+  "reason": "I needed something to do simple tasks for me, and existing prebuilt solutions were... not so personal, and extremely slow."
+}

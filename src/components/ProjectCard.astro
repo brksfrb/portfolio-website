@@ -65,13 +65,16 @@ const categoryIcons: Record<string, string> = {
                         <span class="tag">{tag}</span>
                 ))}
             </div>
-            {project.links && Object.keys(project.links).length > 0 && (
-                    <div class="card-links">
-                        {project.links.github && <span class="link-btn" data-href={project.links.github}>GitHub</span>}
-                        {project.links.demo && <span class="link-btn accent" data-href={project.links.demo}>Demo</span>}
-                        {project.links.store && <span class="link-btn accent" data-href={project.links.store}>Store</span>}
-                    </div>
-            )}
+            <div class="card-footer-right">
+                {project.links && Object.keys(project.links).length > 0 && (
+                        <div class="card-links">
+                            {project.links.github && <span class="link-btn" data-href={project.links.github}>GitHub</span>}
+                            {project.links.demo && <span class="link-btn accent" data-href={project.links.demo}>Demo</span>}
+                            {project.links.store && <span class="link-btn accent" data-href={project.links.store}>Store</span>}
+                        </div>
+                )}
+                <span class="view-project">View Project →</span>
+            </div>
         </div>
     </div>
     <div class="card-glow"></div>
@@ -213,9 +216,27 @@ const categoryIcons: Record<string, string> = {
         gap: 0.3rem;
     }
 
-    .card-links {
+    .card-footer-right {
         display: flex;
-        gap: 0.5rem;
+        align-items: center;
+        gap: 0.75rem;
+        flex-shrink: 0;
+    }
+
+    .view-project {
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        color: var(--text-muted);
+        letter-spacing: 0.05em;
+        transition: color 0.2s;
+        white-space: nowrap;
+    }
+
+    .project-card:hover .view-project {
+        color: var(--accent);
+    }
+    display: flex;
+    gap: 0.5rem;
     }
 
     .link-btn {

@@ -2,12 +2,12 @@
   "id": "rust-utilities",
   "title": "Rust Daily Utilities",
   "shortDescription": "A unified Rust desktop app for everything — image editing, disk searching, file management, and more.",
-  "description": "A personal productivity powerhouse built in Rust with egui. Combines everything needed in daily life: image editing, deep disk search, file management utilities, async operations, and threading — all in a single snappy native app.",
+  "description": "A personal productivity powerhouse built in Rust with egui. Combines everything needed in daily life: image editing, deep disk search, file management utilities, async operations, and threading — all in a single snappy native app. Multiple squares for various actions, all at the same time. Scroll-view for even larger storage!",
   "languages": ["Rust"],
   "tags": ["egui", "Async", "Threading", "Desktop", "Productivity"],
   "category": "desktop",
   "featured": false,
   "highlights": ["Single app replaces many tools", "Native Rust performance"],
-  "screenshots": [],
+  "screenshots": ["utilities.png"],
   "links": {}
 }

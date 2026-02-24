@@ -11,8 +11,8 @@ const { title = "Portfolio", description = "Developer portfolio" } = Astro.props
     <link rel="icon" href="/favicon.ico" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
+    <title>Burak Yılmaz — Systems Engineer & Full-Stack Developer</title>
+    <meta name="description" content="Burak Yılmaz is a systems engineer and full-stack developer building production-ready software, reinforcement learning engines, cross-platform apps, and deployed real-world platforms.">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="/styles/global.css" />
@@ -205,3 +205,17 @@ const { title = "Portfolio", description = "Developer portfolio" } = Astro.props
     .mono { font-family: var(--font-mono); }
     .accent { color: var(--accent); }
 </style>
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Burak Yılmaz",
+        "url": "https://brksfrb.com",
+        "jobTitle": "Systems Engineer & Full-Stack Developer",
+        "sameAs": [
+            "https://github.com/brksfrb",
+            "https://www.linkedin.com/in/burak-y%C4%B1lmaz-336788383/"
+        ]
+    }
+</script>

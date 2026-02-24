@@ -1,0 +1,14 @@
+{
+  "id": "desktop-fairy-wheel",
+  "title": "Desktop Fairy Wheel",
+  "shortDescription": "Turns your desktop icons into a live fairy wheel.",
+  "description": "A C++ system-level application that hooks into the Windows desktop and starts building a circle, then rotating icons around the center as a circle",
+  "languages": ["C++"],
+  "tags": ["Windows API", "System", "Desktop", "C++"],
+  "category": "desktop",
+  "featured": false,
+  "highlights": ["Works smooth", "Windows system-level API integration"],
+  "screenshots": ["desktop_fairy_wheel.png"],
+  "links": {},
+  "reason": "I was bored of making commercial projects, so I begun searching for something interesting. And when I found out I could hook the desktop, why not building a fairy wheel?"
+}

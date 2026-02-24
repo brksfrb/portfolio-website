@@ -8,6 +8,6 @@
   "category": "desktop",
   "featured": false,
   "highlights": ["Real-time physics simulation", "Windows system-level API integration"],
-  "screenshots": [],
+  "screenshots": ["desktop_gravity.png"],
   "links": {}
 }

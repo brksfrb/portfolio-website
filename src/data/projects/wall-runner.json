@@ -12,6 +12,6 @@
     "Multiple balls & movement types",
     "Leveled and endless modes"
   ],
-  "screenshots": [],
+  "screenshots": ["wall_runner_endless.jpeg", "wall_runner_settings.jpeg", "wall_runner_ingame.jpeg"],
   "links": {}
 }

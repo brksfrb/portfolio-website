@@ -75,10 +75,7 @@ const languages = [
             </div>
 
             <p class="hero-desc">
-                From shipping apps on the <strong>Microsoft Store</strong> and <strong>PlayStore</strong> to building
-                reinforcement learning engines from scratch, custom Windows system apps, hardware LED controllers,
-                Minecraft bots, and real-world school management systems deployed in classrooms —
-                this is what obsessive building looks like.
+                I build <strong>scalable, production-ready systems</strong> across the full stack — from distributed web platforms and desktop applications deployed on the Microsoft Store and Google Play to reinforcement learning engines, automation tools, hardware control systems, and real-world educational platforms.
             </p>
 
             <div class="hero-actions">
@@ -111,6 +108,54 @@ const languages = [
                         <div class="lang-item" style={`--lang-color: ${lang.color}`}>
                             <span class="lang-name">{lang.name}</span>
                             <span class="lang-count">{lang.count} projects</span>
+                        </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- SCREENSHOT SLIDER -->
+    <section class="slider-section">
+        <div class="slider-label">
+            <div class="container">
+                <span class="mono-dim">// glimpse — real projects, real interfaces</span>
+            </div>
+        </div>
+        <div class="slider-track-wrap">
+            <div class="slider-track" id="slider-track">
+                {[
+                    { src: "/src/data/screenshots/desktop_pet_duck_installs.png", label: "Desktop Pet DUCK" },
+                    { src: "/src/data/screenshots/school_management_system_v3_code.png", label: "School Management System V3" },
+                    { src: "/src/data/screenshots/coach_system_code.png", label: "Coach System" },
+                    { src: "/src/data/screenshots/lego_crane.jpeg", label: "Lego Crane Higher Than Me", portrait: true },
+                    { src: "/src/data/screenshots/school_management_system_v3_UI.png", label: "School Management System V3" },
+                    { src: "/src/data/screenshots/wall_runner_ingame.jpeg", label: "Wall Runner", portrait: true },
+                    { src: "/src/data/screenshots/teacher_app.jpeg", label: "Ders Zamanı", portrait: true },
+                    { src: "/src/data/screenshots/ai_from_scratch.png", label: "AI From Scratch" },
+                ].map(item => (
+                        <div class={`slide ${item.portrait ? 'portrait' : ''}`}>
+                            <div class="slide-img-wrap">
+                                <img src={item.src} alt={item.label} class="slide-img" loading="lazy" />
+                            </div>
+                            <span class="slide-label">{item.label}</span>
+                        </div>
+                ))}
+                <!-- Duplicate for infinite loop -->
+                {[
+                    { src: "/src/data/screenshots/desktop_pet_duck_installs.png", label: "Desktop Pet DUCK" },
+                    { src: "/src/data/screenshots/school_management_system_v3_code.png", label: "School Management System V3" },
+                    { src: "/src/data/screenshots/coach_system_code.png", label: "Coach System" },
+                    { src: "/src/data/screenshots/lego_crane.jpeg", label: "Lego Crane Higher Than Me", portrait: true },
+                    { src: "/src/data/screenshots/school_management_system_v3_code.png", label: "School Management System V3" },
+                    { src: "/src/data/screenshots/wall_runner_ingame.jpeg", label: "Wall Runner", portrait: true },
+                    { src: "/src/data/screenshots/teacher_app.jpeg", label: "Ders Zamanı", portrait: true },
+                    { src: "/src/data/screenshots/ai_from_scratch.png", label: "AI From Scratch" },
+                ].map(item => (
+                        <div class={`slide ${item.portrait ? 'portrait' : ''}`} aria-hidden="true">
+                            <div class="slide-img-wrap">
+                                <img src={item.src} alt={item.label} class="slide-img" loading="lazy" />
+                            </div>
+                            <span class="slide-label">{item.label}</span>
                         </div>
                 ))}
             </div>
@@ -583,5 +628,89 @@ const languages = [
         max-width: 600px;
         line-height: 1.8;
         margin-bottom: 2rem;
+    }
+
+    /* SLIDER */
+    .slider-section {
+        padding: 3rem 0;
+        overflow: hidden;
+    }
+
+    .slider-label {
+        margin-bottom: 1.5rem;
+    }
+
+    .slider-track-wrap {
+        position: relative;
+        overflow: hidden;
+        mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+        -webkit-mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+    }
+
+    @keyframes slideLeft {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+    }
+
+    .slider-track {
+        display: flex;
+        gap: 1.25rem;
+        width: max-content;
+        animation: slideLeft 30s linear infinite;
+    }
+
+    .slider-track:hover {
+        animation-play-state: paused;
+    }
+
+    .slide {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        flex-shrink: 0;
+    }
+
+    .slide-img-wrap {
+        width: 320px;
+        height: 200px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        overflow: hidden;
+        background: var(--surface);
+        transition: border-color 0.3s;
+    }
+
+    .slide:hover .slide-img-wrap {
+        border-color: var(--accent);
+    }
+
+    .slide-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s;
+    }
+
+    .slide:hover .slide-img {
+        transform: scale(1.04);
+    }
+
+    .slide-label {
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        color: var(--text-muted);
+        text-align: center;
+        letter-spacing: 0.05em;
+    }
+
+    .slide.portrait .slide-img-wrap {
+        width: 130px;
+        height: 200px;
+    }
+
+    .slide.portrait .slide-img {
+        object-fit: contain;
+        background: var(--surface);
     }
 </style>

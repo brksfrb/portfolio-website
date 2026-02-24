@@ -13,6 +13,6 @@
     "Designed for real classroom deployment",
     "Complete OOP architecture"
   ],
-  "screenshots": [],
+  "screenshots": ["school_management_system_v3_UI.png", "school_management_system_v3_code.png"],
   "links": {}
 }

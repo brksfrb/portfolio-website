@@ -1,0 +1,14 @@
+{
+  "id": "minecraft-fun-gadgets-plugin",
+  "title": "Minecraft Fun Gadgets Plugin",
+  "shortDescription": "A fun gadgets plugin with fun gadgets such as paint gun, launcher items etc.",
+  "description": "A Java-based Minecraft plugin implementing a complete fun gadgets plugin. Such as paint guns at different radius, right-click to launch items, launching carpets by color and much more.",
+  "languages": ["Java"],
+  "tags": ["Minecraft", "Plugin", "Java", "Fun", "Server"],
+  "category": "plugin",
+  "featured": false,
+  "highlights": ["Multiple customizable gadgets", "Full command interface"],
+  "screenshots": [],
+  "links": {},
+  "reason": "One day, I've decided that I'm gonna build my own Minecraft server, so I had to learn how to develop plugins. And this was a great place to start!"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "minecraft-bot-ai",
+  "title": "AI Minecraft Bot",
+  "shortDescription": "A Minecraft bot that connects to a backend Python server to perform complex tasks using AI.",
+  "description": "The main bot script is written in JavaScript using mineflayer library, which communicates with the Python backend in order to perform complex tasks. Low ping using raw sockets and self-trained efficient models. Supports features such as following players, making it's own decisions and having a web UI interface for easier control.",
+  "languages": ["JavaScript", "Python"],
+  "tags": ["Automation", "Machine Learning", "AI", "Networking"],
+  "category": "ai",
+  "featured": false,
+  "highlights": ["Web interface", "AI in game", "No ML library dependencies"],
+  "screenshots": [],
+  "links": {},
+  "reason": "Wouldn't it be great to have an automated friend with you in Minecraft? Specially when you need some boring tasks completed. That's what I wanted; which required me to first build my AI from scratch for performance, ease-of-use, and accomplish something I want."
+}

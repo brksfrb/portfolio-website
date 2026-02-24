@@ -13,7 +13,7 @@
     "Clean and modern UI, unlike old systems",
     "Most of what teachers need"
   ],
-  "screenshots": [],
+  "screenshots": ["coach_system_code.png"],
   "links": {
     "github": "https://github.com/brksfrb/coach-system"
   }

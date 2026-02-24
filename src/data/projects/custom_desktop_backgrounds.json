@@ -1,0 +1,13 @@
+{
+  "id": "custom-desktop-backgrounds",
+  "title": "Custom Desktop Backgrounds",
+  "shortDescription": "Multiple minigame-style backgrounds taking your desktop to a next level by adding interactivity.",
+  "description": "A HTML project that runs in the desktop, turning your desktop into interactive minigames with a few minigame and decoration options, all interactive.",
+  "languages": ["HTML"],
+  "tags": ["Desktop", "Fun", "Web", "Entertainment"],
+  "category": "desktop",
+  "featured": false,
+  "highlights": ["Multiple minigames", "No distraction", "Bug free"],
+  "screenshots": ["custom_desktop_backgrounds_bubbles.png", "custom_desktop_backgrounds_snow.png", "custom_desktop_backgrounds_leaves.png"],
+  "links": {}
+}

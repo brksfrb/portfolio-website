@@ -4,7 +4,7 @@ This is my personal portfolio website built with **Astro**.
 
 ## Tech Stack
 - Astro
-- Tailwind CSS (optional)
+- Tailwind CSS
 - JavaScript/TypeScript
 
 ## Live Site

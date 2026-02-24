@@ -1,0 +1,14 @@
+{
+  "id": "minecraft-hoe-guns-plugin",
+  "title": "Minecraft Hoe Guns Plugin",
+  "shortDescription": "Turning Minecraft's harmless hoe items into shooting snowballs and fireballs!",
+  "description": "A Java-based Minecraft plugin implementing a new PVP system to the game! The boring hoes? They are now weapons that throw snowballs, fireballs, arrows at various speeds depending on their level and type.",
+  "languages": ["Java"],
+  "tags": ["Minecraft", "Plugin", "Java", "PVP", "Server"],
+  "category": "plugin",
+  "featured": false,
+  "highlights": ["New PVP mechanic", "Full command interface"],
+  "screenshots": [],
+  "links": {},
+  "reason": "After deciding on building a Minecraft server and writing some plugins for management, I needed a minigame. And this plugin was the core mechanic of that minigame."
+}

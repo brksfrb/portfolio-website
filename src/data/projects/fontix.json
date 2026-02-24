@@ -8,7 +8,7 @@
   "category": "desktop",
   "featured": false,
   "highlights": ["Live on Microsoft Store", "WinUI3 modern Windows UI"],
-  "screenshots": [],
+  "screenshots": ["fontix_editor.png", "fontix_settings.png"],
   "links": {
     "store": "https://apps.microsoft.com/detail/9nkk28v073sm"
   }
