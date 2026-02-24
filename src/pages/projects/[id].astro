@@ -84,7 +84,7 @@ function langClass(lang: string) {
                                 {project.screenshots.map((src: string, i: number) => (
                                         <div class="screenshot-wrap" data-index={i}>
                                             <img
-                                                    src={src.startsWith('http') ? src : `/src/data/screenshots/${src}`}
+                                                    src={src.startsWith('http') ? src : `/screenshots/${src}`}
                                                     alt={`${project.title} screenshot ${i + 1}`}
                                                     class="screenshot-img"
                                                     loading="lazy"
