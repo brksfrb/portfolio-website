@@ -1,15 +1,15 @@
 {
   "id": "desktop-pet-duck",
   "title": "Desktop Pet DUCK",
-  "shortDescription": "A desktop pet app published on the Microsoft Store with 95K views and 5K installs.",
-  "description": "A beloved desktop companion app featuring an animated duck that lives on your screen. Built with tkinter and published to the Microsoft Store, it accumulated 95,000 views and 5,000 installs organically. Later rebuilt in C# with hunger, thirst, and feeding mechanics.",
+  "shortDescription": "A desktop pet app published on the Microsoft Store with 100K views and 5K installs.",
+  "description": "A beloved desktop companion app featuring an animated duck that lives on your screen. Built with tkinter and published to the Microsoft Store, it accumulated 100,000 views and 5,000 installs organically. Later rebuilt in C# with hunger, thirst, and feeding mechanics.",
   "languages": ["Python", "C#"],
   "tags": ["tkinter", "Desktop App", "Microsoft Store", "Published"],
   "category": "desktop",
   "featured": true,
   "featuredOrder": 2,
   "highlights": [
-    "95,000 views on Microsoft Store",
+    "100,000 views on Microsoft Store",
     "5,000 real-world installs",
     "Rebuilt with advanced mechanics in C#"
   ],
