@@ -1,0 +1,14 @@
+{
+  "id": "teacher-app",
+  "title": "Teacher Notifier App",
+  "shortDescription": "An app for teachers allowing them to setup their schedule, making the app notifying them before every lesson.",
+  "description": "An app for teachers allowing them to either bulk import their schedule from PDF, or manually enter it easily via selection or voice assistance. Supports multiple(10+) themes, allows per-lesson notify-before customization. Handles holidays and skips them automatically. Also a feature to let teachers export their schedule as PNG/PDF. Banner ads in bottom for monetization.",
+  "languages": ["dart"],
+  "tags": ["Mobile", "Android", "Daily Usage"],
+  "category": "flutter",
+  "featured": false,
+  "highlights": ["First flutter project", "Closed testing on PlayStore", "First monetization"],
+  "screenshots": ["teacher-app-featured-graphic.png", "teacher-app-home-page.png", "teacher-app-settings.png"],
+  "links": {},
+  "reason": "Had an idea with a teacher relative who thought it would be great to be notified before every lesson."
+}
