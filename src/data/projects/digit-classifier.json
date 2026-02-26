@@ -3,7 +3,7 @@
   "title": "Handwritten Digit Classifier",
   "shortDescription": "Draw your own digits, train a CNN to recognize them, and test live predictions in real time.",
   "description": "A beginner-friendly deep learning project that lets users draw handwritten digits (0-9), create a dataset, train a custom Convolutional Neural Network (DigitNet) using PyTorch, evaluate model performance with accuracy metrics and a confusion matrix, and test the trained model live. Includes tools for data generation and interactive prediction.",
-  "languages": ["python"],
+  "languages": ["Python"],
   "tags": ["Desktop", "Machine Learning", "PyTorch", "AI"],
   "category": "ai",
   "featured": false,
