@@ -1,0 +1,14 @@
+{
+  "id": "minecraft-fun-commands-plugin",
+  "title": "Minecraft Fun Commands Plugin",
+  "shortDescription": "A fun commands plugin with fun commands such as /cage <player>, /launch <player>...",
+  "description": "A Java-based Minecraft plugin implementing a complete fun commands plugin. Such as /cage <player> for a specific duration with a title shown to players, some other troll commands, all can be used by admins to have some fun :)",
+  "languages": ["Java"],
+  "tags": ["Minecraft", "Plugin", "Java", "Fun", "Server"],
+  "category": "plugin",
+  "featured": false,
+  "highlights": ["Multiple commands", "Full command interface"],
+  "screenshots": [],
+  "links": {},
+  "reason": "I needed to have some fun in my server. And what's more fun than trolling players as owner?"
+}
