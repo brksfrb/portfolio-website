@@ -1,0 +1,14 @@
+{
+  "id": "minecraft-npc-manager-plugin",
+  "title": "Minecraft NPC Manager Plugin",
+  "shortDescription": "An NPC manager plugin which can open a UI, teleport players across worlds, or run custom commands.",
+  "description": "A Java-based Minecraft plugin implementing a complete NPC manager plugin. Main features include custom UI, teleporting players across worlds, running custom commands. Full command-line interface to easily create, edit, delete and manage your NPCs.",
+  "languages": ["Java"],
+  "tags": ["Minecraft", "Plugin", "Java", "Management", "Server"],
+  "category": "plugin",
+  "featured": false,
+  "highlights": ["Multiple commands", "Full command interface"],
+  "screenshots": [],
+  "links": {},
+  "reason": "Players need a way to interact with the server. And who uses the boring compass/nether star nowadays, when you can use beautiful NPCs?"
+}
