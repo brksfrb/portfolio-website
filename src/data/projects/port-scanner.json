@@ -9,6 +9,6 @@
   "featured": false,
   "highlights": ["Scans a single port for all 65565 local IPs in seconds", "Super simple setup", "Expandable design"],
   "screenshots": ["port-scanner-gui.png"],
-  "links": {},
+  "links": {"github":  "https://github.com/brksfrb/port-scanner"},
   "reason": "Once you want to scan IPs in your localhost, you realize how complicated the existing solutions are. I realized it when I wanted to scan my localhost, so I had to build a better scanner which can scan at extremely high speeds. I still use it in daily life."
 }
