@@ -1,17 +1,18 @@
 {
   "id": "wall-runner",
   "title": "Wall Runner",
-  "shortDescription": "A polished 2D mobile game with multiple balls, powerups, and leveled/endless modes — pending PlayStore publish.",
-  "description": "A complete mobile game built in Unity where walls fall from the top while the player swipes their ball character to avoid them. Features multiple unlockable balls, varied movement types, powerup system, and both level-based and endless game modes. Currently in production access on the PlayStore.",
+  "shortDescription": "A polished 2D mobile game with multiple balls, power-ups, and leveled/endless modes — LIVE on PlayStore.",
+  "description": "A complete mobile game built in Unity where walls fall from the top while the player swipes their ball character to avoid them. Features multiple unlockable balls, varied movement types, power-up system, and both level-based and endless game modes. Currently in open testing on the PlayStore.",
   "languages": ["C#"],
   "tags": ["Unity", "Mobile", "PlayStore", "2D", "Game"],
   "category": "game",
-  "featured": false,
+  "featured": true,
+  "featuredOrder": 5,
   "highlights": [
-    "PlayStore production access",
+    "LIVE on PlayStore",
     "Multiple balls & movement types",
     "Leveled and endless modes"
   ],
-  "screenshots": ["wall_runner_endless.jpeg", "wall_runner_settings.jpeg", "wall_runner_ingame.jpeg"],
-  "links": {}
+  "screenshots": ["wall-runner-leaderboard.png", "wall-runner-mode-selection.png", "wall-runner-gameplay.png", "wall-runner-shop.png"],
+  "links": {"store":  "https://play.google.com/store/apps/details?id=com.brksfrb.ballrunner"}
 }

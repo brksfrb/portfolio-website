@@ -6,8 +6,9 @@
   "languages": ["Flutter"],
   "tags": ["Mobile", "Android", "Daily Usage"],
   "category": "mobile",
-  "featured": false,
-  "highlights": ["First flutter project", "Closed testing on PlayStore", "First monetization"],
+  "featured": true,
+  "featuredOrder": 6,
+  "highlights": ["LIVE on PlayStore", "First flutter project", "First monetization"],
   "screenshots": ["teacher-app-featured-graphic.png", "teacher-app-home-page.png", "teacher-app-settings.png"],
   "links": {"store":  "https://play.google.com/store/apps/details?id=com.brksfrb.teacher_app"},
   "reason": "Had an idea with a teacher relative who thought it would be great to be notified before every lesson."
