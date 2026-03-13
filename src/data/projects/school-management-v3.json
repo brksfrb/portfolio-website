@@ -11,7 +11,8 @@
   "highlights": [
     "Fully functional in under 2 weeks",
     "Designed for real classroom deployment",
-    "Complete OOP architecture"
+    "Complete OOP architecture",
+    "100+ files"
   ],
   "screenshots": ["school_management_system_v3_UI.png", "school_management_system_v3_code.png"],
   "links": {}
