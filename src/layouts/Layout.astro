@@ -4,6 +4,10 @@ interface Props {
     description?: string;
 }
 const { title = "Portfolio", description = "Developer portfolio" } = Astro.props;
+
+// Check if current page is contact
+const currentPath = Astro.url.pathname;
+const isContactPage = currentPath === '/contact' || currentPath === '/contact/';
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -65,6 +69,14 @@ const { title = "Portfolio", description = "Developer portfolio" } = Astro.props
         </div>
     </div>
 </footer>
+
+<!-- FLOATING CONTACT BUTTON - Appears on all pages -->
+{!isContactPage && (
+        <a href="/contact" class="floating-contact-btn" aria-label="Contact">
+            <span class="floating-icon">✉</span>
+            <span class="floating-text">Contact</span>
+        </a>
+)}
 
 <script>
     // Intersection Observer for reveal animations
@@ -204,6 +216,74 @@ const { title = "Portfolio", description = "Developer portfolio" } = Astro.props
 
     .mono { font-family: var(--font-mono); }
     .accent { color: var(--accent); }
+
+    /* FLOATING CONTACT BUTTON */
+    .floating-contact-btn {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--accent);
+        color: var(--bg);
+        padding: 0.75rem 1.25rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-family: var(--font-display);
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        z-index: 1000;
+        box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(0, 255, 136, 0.3);
+        cursor: pointer;
+    }
+
+    .floating-contact-btn:hover {
+        transform: translateY(-3px) scale(1.05);
+        background: var(--accent-2);
+        box-shadow: 0 8px 25px rgba(0, 255, 136, 0.4);
+        color: var(--bg);
+    }
+
+    .floating-icon {
+        font-size: 1.2rem;
+    }
+
+    .floating-text {
+        letter-spacing: 0.5px;
+    }
+
+    @keyframes gentle-pulse {
+        0%, 100% {
+            box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+        }
+        50% {
+            box-shadow: 0 4px 25px rgba(0, 255, 136, 0.5);
+        }
+    }
+
+    .floating-contact-btn {
+        animation: gentle-pulse 2s ease-in-out infinite;
+    }
+
+    @media (max-width: 768px) {
+        .floating-contact-btn {
+            bottom: 1.5rem;
+            right: 1.5rem;
+            padding: 0.8rem;
+        }
+
+        .floating-text {
+            display: none;
+        }
+
+        .floating-contact-btn {
+            border-radius: 50%;
+        }
+    }
 </style>
 
 <script type="application/ld+json">
