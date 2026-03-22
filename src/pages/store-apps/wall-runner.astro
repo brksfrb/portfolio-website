@@ -1,0 +1,168 @@
+---
+title: "Wall Runner"
+---
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wall Runner</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 90vh;
+            text-align: center;
+            background: linear-gradient(135deg, #1f1f1f, #111111);
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+            color: #ff416c;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 1rem 0 2rem 0;
+            color: #ccc;
+        }
+
+        .play-button, .contact-button {
+            padding: 1rem 2rem;
+            margin: 0.5rem;
+            background: #ff416c;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .play-button:hover, .contact-button:hover {
+            transform: scale(1.05);
+            background: #ff4b2b;
+        }
+
+        .screenshots {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 2rem;
+            background: #111;
+        }
+
+        .screenshots img {
+            width: 300px;
+            border-radius: 10px;
+            border: 2px solid #222;
+        }
+
+        .section {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        h2 {
+            color: #ff416c;
+            margin-bottom: 1rem;
+        }
+
+        p, li {
+            color: #ccc;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        .privacy {
+            background: #111;
+            padding: 2rem 1rem;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+<section class="hero">
+    <h1>Wall Runner</h1>
+    <p>Dodge walls, run fast, and beat your high score!</p>
+    <div>
+        <a href="https://play.google.com/store/apps/details?id=com.brksfrb.ballrunner" class="play-button">Play Now 🚀</a>
+        <a href="/about" class="contact-button">Contact Dev 📧</a>
+    </div>
+</section>
+
+<section class="screenshots">
+    <img src="/screenshots/wall-runner-gameplay.png" alt="Wall Runner screenshot 1" />
+    <img src="/screenshots/wall-runner-shop.png" alt="Wall Runner screenshot 2" />
+    <img src="/screenshots/wall-runner-leaderboard.png" alt="Wall Runner screenshot 3" />
+</section>
+
+<section class="section privacy">
+    <h2>Privacy Policy</h2>
+    <p><strong>Wall Runner</strong> ("we", "our", or "us") respects your privacy. This Privacy Policy explains what information we collect when you use our application and how we use it.</p>
+
+    <h3>Information We Collect</h3>
+    <ul>
+        <li><strong>Screen size:</strong> Used to optimize the game display for your device.</li>
+        <li><strong>PlayerPrefs data:</strong> Stores non-personal game data such as progress, preferences, and settings.</li>
+        <li><strong>Current game level or scene:</strong> For gameplay navigation and functionality.</li>
+        <li><strong>Basic analytics data:</strong> Includes crash reports, session duration, and gameplay statistics.</li>
+        <li><strong>Leaderboard data via Unity Gaming Services (UGS):</strong> Includes your in-game username and score for displaying on leaderboards.</li>
+    </ul>
+
+    <h3>What We Do With Your Information</h3>
+    <ul>
+        <li>Improve gameplay experience and fix bugs</li>
+        <li>Enable core game features (e.g., saving progress, adjusting screen layout)</li>
+        <li>Display ads relevant to the gameplay experience</li>
+        <li>Update and maintain leaderboards through Unity Gaming Services</li>
+    </ul>
+
+    <p>We do not collect personal information such as name, email, or location (except what is voluntarily provided for leaderboards), track you across other apps or websites, or share your data with third parties outside of ads or leaderboard functionality.</p>
+
+    <h3>Data Security</h3>
+    <p>We take reasonable measures to protect your data stored locally on your device. However, no electronic storage or transmission method is completely secure.</p>
+
+    <h3>Ads & Analytics</h3>
+    <p>Ads may be shown in the game, managed through ad networks, but they do not collect personal information beyond what is mentioned above. Basic analytics helps us understand game performance and usage patterns but does not identify you personally.</p>
+
+    <h3>Changes to This Privacy Policy</h3>
+    <p>We may update this Privacy Policy from time to time. Changes will be reflected on this page.</p>
+
+    <h3>Contact Us</h3>
+    <p>If you have any questions about this Privacy Policy, you can contact us at: 📧 <a href="mailto:support@brksfrb.com">support@brksfrb.com</a></p>
+</section>
+
+<footer>
+    © 2026 brksfrb.com — Wall Runner
+</footer>
+</body>
+</html>
