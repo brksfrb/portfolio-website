@@ -1,0 +1,18 @@
+{
+  "id": "ev3-ir-remote",
+  "title": "Custom IR Remote Receiver for LEGO EV3",
+  "shortDescription": "Built a custom IR remote receiver for LEGO EV3 using Arduino when the original sensor broke.",
+  "description": "Replaced a broken LEGO EV3 IR receiver sensor with a custom Arduino-based solution. The Arduino decodes LEGO Power Functions IR remote signals and outputs analog voltage to the EV3 sensor port, allowing full remote control of EV3 motors without any original LEGO hardware.",
+  "languages": ["C++"],
+  "tags": ["Arduino", "LEGO EV3", "IR", "Hardware", "Embedded"],
+  "category": "hardware",
+  "featured": false,
+  "highlights": [
+    "Decodes LEGO Power Functions IR protocol",
+    "Custom analog voltage encoding for EV3 sensor port",
+    "Drop-in replacement for broken LEGO IR receiver"
+  ],
+  "screenshots": ["ev3_ir_remote.png"],
+  "links": {},
+  "reason": "Our LEGO EV3 IR receiver broke mid-project with no replacement available. Instead of ordering a new one, I reverse-engineered the EV3 sensor port protocol and built a custom receiver using Arduino and a spare IR sensor, decoding the LEGO Power Functions remote signal from scratch."
+}

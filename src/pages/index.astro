@@ -4,12 +4,15 @@ import ProjectCard from '../components/ProjectCard.astro';
 import Stats from '../components/Stats.astro';
 
 // Load all project JSON files
-const projectFiles = await Astro.glob('../data/projects/*.json');
-const allProjects = projectFiles.map(f => f.default);
+const projectFiles = [
+    ...(await Astro.glob('../data/projects/*.json')),
+    ...(await Astro.glob('../data/projects/*.ts')),
+];
+const allProjects = projectFiles.map((f) => f.default);
 
 // Featured projects sorted by featuredOrder
 const featuredProjects = allProjects
-    .filter(p => p.featured)
+    .filter(p => p.featured && p.featuredOrder != null)
     .sort((a, b) => (a.featuredOrder ?? 99) - (b.featuredOrder ?? 99));
 
 const languages = [
@@ -69,7 +72,7 @@ const languages = [
                 </div>
                 <div class="hero-stat-divider"></div>
                 <div class="hero-stat">
-                    <span class="hero-stat-value">6K+</span>
+                    <span class="hero-stat-value">10K+</span>
                     <span class="hero-stat-label">app installs</span>
                 </div>
             </div>
@@ -126,7 +129,7 @@ const languages = [
                 {[
                     { src: "/screenshots/coach_system_code.png", label: "Coach System" },
                     { src: "/screenshots/school_management_system_v3_code.png", label: "School Management System V3" },
-                    { src: "/screenshots/desktop-pet-duck-installs.png", label: "Desktop Pet DUCK" },
+                    { src: "/screenshots/desktop-pets-installs.png", label: "Desktop Pets" },
                     { src: "/screenshots/lego_crane.jpeg", label: "Lego Crane Higher Than Me", portrait: true },
                     { src: "/screenshots/school_management_system_v3_UI.png", label: "School Management System V3" },
                     { src: "/screenshots/wall-runner-gameplay.png", label: "Wall Runner", portrait: true },
@@ -144,7 +147,7 @@ const languages = [
                 {[
                     { src: "/screenshots/coach_system_code.png", label: "Coach System" },
                     { src: "/screenshots/school_management_system_v3_code.png", label: "School Management System V3" },
-                    { src: "/screenshots/desktop-pet-duck-installs.png", label: "Desktop Pet DUCK" },
+                    { src: "/screenshots/desktop-pets-installs.png", label: "Desktop Pets" },
                     { src: "/screenshots/lego_crane.jpeg", label: "Lego Crane Higher Than Me", portrait: true },
                     { src: "/screenshots/school_management_system_v3_UI.png", label: "School Management System V3" },
                     { src: "/screenshots/wall-runner-gameplay.png", label: "Wall Runner", portrait: true },

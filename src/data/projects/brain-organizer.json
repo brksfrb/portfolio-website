@@ -1,0 +1,21 @@
+{
+  "id": "brain-organizer",
+  "title": "Brain Organizer",
+  "shortDescription": "A personal full-stack organizer for tracking daily logs, todos, and progress across 30+ projects — built because Notion was overkill.",
+  "description": "A self-hosted PWA built with Next.js and Supabase for tracking daily logs, per-project todos, and progress timelines. Features real-time sync across iOS and desktop, priority color coding, customizable push notification reminders, and a global dashboard summarizing all active projects.",
+  "languages": ["TypeScript"],
+  "tags": ["Next.js", "Supabase", "PWA", "Productivity", "Full Stack", "Push Notifications"],
+  "category": "productivity",
+  "featured": true,
+  "highlights": [
+    "Real-time sync across iOS and desktop via Supabase Realtime",
+    "Per-project daily logs with timeline view",
+    "Push notifications for todos and customizable reminders",
+    "Global dashboard with priority color coding across 30+ projects"
+  ],
+  "screenshots": ["brain-organizer.png"],
+  "links": {
+    "live": "https://org.brksfrb.com"
+  },
+  "reason": "I was drowning in todo2.txt files and papers all over my desk. Notion was too generic and fought my workflow. So I specced and built exactly what my brain needed — per-project daily logs, priority-colored todos, and reminders — in an afternoon using Cursor."
+}

@@ -1,9 +1,11 @@
 ---
+import { DESKTOP_PETS } from "../config/desktopPets";
+
 const stats = [
   { label: "Languages", value: "10+", detail: "Python, C++, C#, Rust, Java, JS..." },
   { label: "Total Projects", value: "300+", detail: "Across all languages & platforms" },
-  { label: "MS Store Installs", value: "6K+", detail: "Desktop Pet DUCK" },
-  { label: "MS Store Views", value: "150K+", detail: "Desktop Pet DUCK" },
+  { label: "MS Store Installs", value: DESKTOP_PETS.msStore.installs, detail: DESKTOP_PETS.title },
+  { label: "MS Store Views", value: DESKTOP_PETS.msStore.views, detail: DESKTOP_PETS.title },
   { label: "Largest Project", value: "100+", detail: "files, still growing" },
   { label: "Published Apps", value: "4", detail: "MS Store · PlayStore" },
 ];
