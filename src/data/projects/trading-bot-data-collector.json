@@ -1,0 +1,26 @@
+{
+    "id":  "trading-bot-data-collector",
+    "title":  "Trading Bot Data Collector",
+    "shortDescription":  "Python collector that pulls market data for a trading bot dashboard I was building.",
+    "description":  "Data collection side of a trading bot stack. Scrapes and stores coin data so a dashboard can chart and review it. Research tooling, not financial advice.",
+    "languages":  [
+                      "Python"
+                  ],
+    "tags":  [
+                 "Trading",
+                 "Data",
+                 "Collector"
+             ],
+    "category":  "ai",
+    "featured":  false,
+    "highlights":  [
+                       "Feeds a trading dashboard",
+                       "Python collector"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

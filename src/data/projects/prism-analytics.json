@@ -1,0 +1,28 @@
+{
+    "id":  "prism-analytics",
+    "title":  "Prism Analytics",
+    "shortDescription":  "Self-hosted analytics for my own products. Tracks funnels and custom events without third-party trackers.",
+    "description":  "Next.js + Supabase analytics backend I use across a few products. Cookieless beacon, raw events with rollups, and room for custom metrics like viral loop / k-factor. Single-user dashboard, no third-party scripts.",
+    "languages":  [
+                      "TypeScript"
+                  ],
+    "tags":  [
+                 "Next.js",
+                 "Analytics",
+                 "Supabase",
+                 "Self-hosted"
+             ],
+    "category":  "web",
+    "featured":  false,
+    "highlights":  [
+                       "Cookieless beacon",
+                       "Custom metrics and funnels",
+                       "Self-hosted on Supabase"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

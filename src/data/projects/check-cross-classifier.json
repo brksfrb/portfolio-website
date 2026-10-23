@@ -1,0 +1,26 @@
+{
+    "id":  "check-cross-classifier",
+    "title":  "Check / Cross Classifier",
+    "shortDescription":  "Classifies student marks on a question as check, cross, or blank.",
+    "description":  "Small classifier for worksheet photos. Looks at a question region and decides whether the student marked it correct, wrong, or left it empty. Pairs with the boundary detector.",
+    "languages":  [
+                      "Python"
+                  ],
+    "tags":  [
+                 "Computer Vision",
+                 "Education",
+                 "Classification"
+             ],
+    "category":  "cv",
+    "featured":  false,
+    "highlights":  [
+                       "Check / cross / blank labels",
+                       "Built for worksheet photos"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

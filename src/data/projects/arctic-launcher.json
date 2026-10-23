@@ -1,0 +1,30 @@
+{
+    "id":  "arctic-launcher",
+    "title":  "Arctic Launcher",
+    "shortDescription":  "A fast Minecraft launcher for Windows, macOS and Linux. Mod loaders, mods, skins, and playing with friends in one small app.",
+    "description":  "Cross-platform Minecraft launcher written in Rust. Installs releases and mod loaders, manages mods and skins, and has a friends flow. Ships with a website and CLI. Open source with regular releases.",
+    "languages":  [
+                      "Rust"
+                  ],
+    "tags":  [
+                 "Minecraft",
+                 "Launcher",
+                 "Cross-platform",
+                 "Open Source"
+             ],
+    "category":  "desktop",
+    "featured":  true,
+    "featuredOrder":  1,
+    "highlights":  [
+                       "Windows, macOS and Linux",
+                       "Mod loaders and mods in one app",
+                       "Open source with releases"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+                  "demo":  "https://arcticlauncher.com",
+                  "github":  "https://github.com/brksfrb/arctic-launcher"
+              }
+}

@@ -1,0 +1,26 @@
+{
+    "id":  "protocolmc-web",
+    "title":  "ProtocolMC Website",
+    "shortDescription":  "Website for the ProtocolMC Minecraft network.",
+    "description":  "Next.js site for protocolmc.net. Landing and network pages for the servers that run the custom plugin set.",
+    "languages":  [
+                      "TypeScript"
+                  ],
+    "tags":  [
+                 "Next.js",
+                 "Minecraft",
+                 "Network"
+             ],
+    "category":  "web",
+    "featured":  false,
+    "highlights":  [
+                       "Live at protocolmc.net",
+                       "Next.js"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+                  "demo":  "https://protocolmc.net"
+              }
+}

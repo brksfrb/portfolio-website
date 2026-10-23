@@ -1,0 +1,25 @@
+{
+    "id":  "file-operations-rust",
+    "title":  "Rust File Operations",
+    "shortDescription":  "Rust practice project around file operations.",
+    "description":  "Small Rust crate/app for common file tasks. Learning pass that I kept because the helpers are still useful.",
+    "languages":  [
+                      "Rust"
+                  ],
+    "tags":  [
+                 "Rust",
+                 "Files",
+                 "CLI"
+             ],
+    "category":  "desktop",
+    "featured":  false,
+    "highlights":  [
+                       "Rust file helpers"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

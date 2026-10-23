@@ -1,0 +1,25 @@
+{
+    "id":  "galatamc-resourcepack",
+    "title":  "GalataMC Resource Pack",
+    "shortDescription":  "Resource pack used on the GalataMC Minecraft server.",
+    "description":  "Client resource pack for GalataMC. Open on GitHub so players and other servers can look at it.",
+    "languages":  [
+                      "JavaScript"
+                  ],
+    "tags":  [
+                 "Minecraft",
+                 "Resource Pack"
+             ],
+    "category":  "game",
+    "featured":  false,
+    "highlights":  [
+                       "Used on GalataMC",
+                       "Public on GitHub"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+                  "github":  "https://github.com/brksfrb/galatamc-resourcepack"
+              }
+}

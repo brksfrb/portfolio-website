@@ -1,0 +1,26 @@
+{
+    "id":  "soccer-cars",
+    "title":  "Soccer Cars",
+    "shortDescription":  "Rocket League style car-soccer sketch in Unity.",
+    "description":  "Unity game where cars play soccer. Small physics playground inspired by car-soccer games.",
+    "languages":  [
+                      "C#"
+                  ],
+    "tags":  [
+                 "Unity",
+                 "Cars",
+                 "Soccer"
+             ],
+    "category":  "game",
+    "featured":  false,
+    "highlights":  [
+                       "Car soccer",
+                       "Unity physics"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

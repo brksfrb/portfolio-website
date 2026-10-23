@@ -1,0 +1,26 @@
+{
+    "id":  "maze3d",
+    "title":  "Maze 3D",
+    "shortDescription":  "3D maze game in Unity.",
+    "description":  "Unity 3D maze. One of several maze experiments I made while learning level layout and camera feel.",
+    "languages":  [
+                      "C#"
+                  ],
+    "tags":  [
+                 "Unity",
+                 "Maze",
+                 "3D"
+             ],
+    "category":  "game",
+    "featured":  false,
+    "highlights":  [
+                       "3D maze",
+                       "Unity"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

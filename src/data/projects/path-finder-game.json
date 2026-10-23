@@ -1,0 +1,25 @@
+{
+    "id":  "path-finder-game",
+    "title":  "Path Finder",
+    "shortDescription":  "Unity pathfinding game experiment.",
+    "description":  "Unity project around pathfinding. Used it to learn agent movement and grid search feel.",
+    "languages":  [
+                      "C#"
+                  ],
+    "tags":  [
+                 "Unity",
+                 "Pathfinding"
+             ],
+    "category":  "game",
+    "featured":  false,
+    "highlights":  [
+                       "Pathfinding focused",
+                       "Unity"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

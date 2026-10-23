@@ -1,0 +1,1292 @@
+{
+  "generated": "2026-10-22",
+  "note": "Compact archive of real projects without a full card. Hidden, malware, pure scratch and forks excluded. Near-duplicates grouped. Updated with sweep2 finds and E:\\all scan.",
+  "entryCount": 195,
+  "folderCount": 292,
+  "entries": [
+    {
+      "name": "3D Car Unity experiments",
+      "stack": "C# / Unity",
+      "year": 2024,
+      "blurb": "Three Unity car physics sketches (3dCar series).",
+      "grouped": [
+        "3dCar",
+        "3dcar2",
+        "3dcar3"
+      ]
+    },
+    {
+      "name": "After Command",
+      "stack": "C#",
+      "year": 2025,
+      "blurb": "C# after-command utility."
+    },
+    {
+      "name": "ahmtsfrb.com",
+      "stack": "JavaScript",
+      "year": 2026,
+      "blurb": "Personal static site experiment."
+    },
+    {
+      "name": "AIFile Renamer",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Renames files with simple helpers."
+    },
+    {
+      "name": "Always On Top",
+      "stack": "Python / Tkinter",
+      "year": 2024,
+      "blurb": "Tiny always on top Tkinter window toggle."
+    },
+    {
+      "name": "Announcements Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Announcements Plugin)."
+    },
+    {
+      "name": "Arctic cosmetic concept sketches",
+      "stack": "HTML / JS",
+      "year": 2026,
+      "blurb": "Wing, cape and emote concept pages from a cosmetics design pass (48 sketches).",
+      "grouped": [
+        "shoulder-pet-trio",
+        "aurora-vault-emote",
+        "emote-collection-03",
+        "emote-collection-04",
+        "emote-collection-05",
+        "emote-collection-06",
+        "emote-collection-07",
+        "emote-studies",
+        "emote-studies-v2",
+        "facepalm-act",
+        "victory-groove-emote",
+        "victory-hop-emote",
+        "aetherglass-wings",
+        "amethyst-spire-crown",
+        "animated-wing-pair",
+        "+33 more"
+      ],
+      "covers": 48
+    },
+    {
+      "name": "Arctic cosmetics deploy",
+      "stack": "TypeScript",
+      "year": 2026,
+      "blurb": "Build and deploy scripts for Arctic cosmetics packs."
+    },
+    {
+      "name": "Arctic validation",
+      "stack": "Rust",
+      "year": 2026,
+      "blurb": "Validation helpers for Arctic launcher packs."
+    },
+    {
+      "name": "Arduino serial desktop controller",
+      "stack": "Python / Serial",
+      "year": 2024,
+      "blurb": "Reads an Arduino over COM serial and maps buttons to keyboard and browser actions."
+    },
+    {
+      "name": "Auction House Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Auction House Plugin)."
+    },
+    {
+      "name": "Auth Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Auth Plugin)."
+    },
+    {
+      "name": "Auto Bot Beta",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Early automation bot experiment."
+    },
+    {
+      "name": "Auto Clicker",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Desktop auto-clicker utility."
+    },
+    {
+      "name": "Auto Labeler",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Labels images or data for training sets."
+    },
+    {
+      "name": "AutoLabeler Client",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Tkinter client UI for the AutoLabeler labeling workflow."
+    },
+    {
+      "name": "BlocksMC bot",
+      "stack": "JavaScript",
+      "year": 2025,
+      "blurb": "Node bot aimed at BlocksMC-style servers."
+    },
+    {
+      "name": "Blurry Image Detection",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Bulk blur filter for cleaning classifier training images."
+    },
+    {
+      "name": "Bonjour",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Bonjour / mDNS discovery experiment."
+    },
+    {
+      "name": "Bridge Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Bridge Plugin)."
+    },
+    {
+      "name": "Brisk",
+      "stack": "Other",
+      "year": 2026,
+      "blurb": "Local desktop tooling experiment named Brisk."
+    },
+    {
+      "name": "Camera Shortcuts",
+      "stack": "Python",
+      "year": 2024,
+      "blurb": "Hotkey helpers around the webcam."
+    },
+    {
+      "name": "Car Game 2P Web",
+      "stack": "HTML / JS",
+      "year": 2025,
+      "blurb": "Two-player car game in the browser."
+    },
+    {
+      "name": "Car Try Project",
+      "stack": "Unity / C#",
+      "year": 2025,
+      "blurb": "Unity car handling tryout."
+    },
+    {
+      "name": "Change Logger and Tension Saver",
+      "stack": "Python",
+      "year": 2024,
+      "blurb": "Colorama console tools for timestamped note lines and editing them.",
+      "grouped": [
+        "ChangeLogger",
+        "TensionSaver"
+      ]
+    },
+    {
+      "name": "Chat Bot Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Chat Bot Plugin)."
+    },
+    {
+      "name": "Chat GPTMessaging App",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Chat UI around a messaging API."
+    },
+    {
+      "name": "CivCiv Simulator",
+      "stack": "Python",
+      "year": 2023,
+      "blurb": "Turkish idle text game about collecting chicks (civciv)."
+    },
+    {
+      "name": "Claim Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Claim Plugin)."
+    },
+    {
+      "name": "Clicker Game",
+      "stack": "Roblox / Luau",
+      "year": 2026,
+      "blurb": "Roblox clicker game."
+    },
+    {
+      "name": "Client Demo",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Small client demo for a socket or API service."
+    },
+    {
+      "name": "Coach System V2 Frontend",
+      "stack": "Dart",
+      "year": 2026,
+      "blurb": "Flutter/Dart frontend for Coach System V2. Lives on GitHub only; no local clone on this PC."
+    },
+    {
+      "name": "Coach System V2Old",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Older cut of Coach System V2."
+    },
+    {
+      "name": "Coin plugins",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft coin/currency plugins (2).",
+      "grouped": [
+        "CoinPlugin",
+        "CoinManager"
+      ],
+      "covers": 2
+    },
+    {
+      "name": "Competition Project",
+      "stack": "Unity / C#",
+      "year": 2025,
+      "blurb": "Unity competition project entry."
+    },
+    {
+      "name": "Configure Item Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Configure Item Plugin)."
+    },
+    {
+      "name": "Connection Guard Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Connection Guard Plugin)."
+    },
+    {
+      "name": "Core Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Core Plugin)."
+    },
+    {
+      "name": "CPSTest",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Clicks-per-second tester."
+    },
+    {
+      "name": "CPUBenchmark",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Tiny CPU benchmark script."
+    },
+    {
+      "name": "CPUTemperature Reader",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Reads CPU temperature sensors."
+    },
+    {
+      "name": "Crates Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Crates Plugin)."
+    },
+    {
+      "name": "Credits plugins",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft credits / credit-shop plugins (2).",
+      "grouped": [
+        "CreditShopPlugin",
+        "CreditsPlugin"
+      ],
+      "covers": 2
+    },
+    {
+      "name": "Cur Editor",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Editor for Windows .cur cursor files."
+    },
+    {
+      "name": "Custom Text Editor New",
+      "stack": "C#",
+      "year": 2026,
+      "blurb": "C# desktop experiment (Custom Text Editor New)."
+    },
+    {
+      "name": "Daily Rewards Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Daily Rewards Plugin)."
+    },
+    {
+      "name": "Debug Website Fetch",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Debug helper for fetching web pages."
+    },
+    {
+      "name": "Decoration Commands",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Decoration Commands)."
+    },
+    {
+      "name": "Delivery",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Python utility or experiment (Delivery)."
+    },
+    {
+      "name": "Desktop Games",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Small desktop and browser mini-games."
+    },
+    {
+      "name": "Detection web sketches",
+      "stack": "JavaScript",
+      "year": 2026,
+      "blurb": "Small browser detection experiments (2 folders).",
+      "grouped": [
+        "QuestionDetectionFlaskServer",
+        "QuestionDetectionUpdated"
+      ],
+      "covers": 2
+    },
+    {
+      "name": "Duels Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Duels Plugin)."
+    },
+    {
+      "name": "Early school management apps",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Flask school apps from before School Management V3, including SMSLib and an even earlier SchoolSystem cut.",
+      "grouped": [
+        "SchoolManagementSystem",
+        "SchoolSystem",
+        "SMSLib"
+      ],
+      "covers": 3
+    },
+    {
+      "name": "Economy Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Economy Plugin)."
+    },
+    {
+      "name": "Events Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Events Plugin)."
+    },
+    {
+      "name": "Excel Data Scraper",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Scrapes data into Excel sheets."
+    },
+    {
+      "name": "FastAPI Messaging App",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "FastAPI messaging backend with a small database module."
+    },
+    {
+      "name": "File Installer",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Installs files to a target folder."
+    },
+    {
+      "name": "File Searcher",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Searches files on disk."
+    },
+    {
+      "name": "File Server",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Simple local file server."
+    },
+    {
+      "name": "File Watcher",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Watches a folder for file changes."
+    },
+    {
+      "name": "Filtered Blocks",
+      "stack": "Java",
+      "year": 2025,
+      "blurb": "Minecraft server plugin (Filtered Blocks)."
+    },
+    {
+      "name": "Flappy Bird",
+      "stack": "Python / Tkinter",
+      "year": 2024,
+      "blurb": "Flappy Bird style clone with downloadable bird and pipe art.",
+      "grouped": [
+        "FlappyBird",
+        "FlappyBird2"
+      ]
+    },
+    {
+      "name": "Flask Certificate",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Flask app around certificate handling."
+    },
+    {
+      "name": "Flask i18n and route experiments",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Flask Babel multi-language support and a categorized-routes layout sketch.",
+      "grouped": [
+        "FlaskMultiLanguageSupport",
+        "FlaskCategorizedRoutes"
+      ],
+      "covers": 2
+    },
+    {
+      "name": "Flask Upload File",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Flask file upload endpoint."
+    },
+    {
+      "name": "Folder Lister",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Lists folder contents."
+    },
+    {
+      "name": "Folder Locker",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Locks a folder behind a password."
+    },
+    {
+      "name": "FRCWebsite",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Website for an FRC robotics team."
+    },
+    {
+      "name": "Friends Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Friends Plugin)."
+    },
+    {
+      "name": "Galata MCAPITester",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Python utility or experiment (Galata MCAPITester)."
+    },
+    {
+      "name": "GalataMC Discord bot",
+      "stack": "JavaScript",
+      "year": 2026,
+      "blurb": "Discord bot sketch for GalataMC."
+    },
+    {
+      "name": "GPUTemperature Reader",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Reads GPU temperature sensors."
+    },
+    {
+      "name": "Growtopia Bot",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Growtopia bot experiment."
+    },
+    {
+      "name": "GUIManager",
+      "stack": "Java",
+      "year": 2025,
+      "blurb": "Minecraft server plugin (GUIManager)."
+    },
+    {
+      "name": "Hand tracking mouse control",
+      "stack": "Python / OpenCV / MediaPipe",
+      "year": 2024,
+      "blurb": "Webcam hand landmark zones that move the system mouse. Iterations behind the Minecraft Hand Controller card.",
+      "grouped": [
+        "HandDetection",
+        "HandDetectorV2",
+        "FingerDetector",
+        "OpenCVHands",
+        "MouseMoverHand"
+      ]
+    },
+    {
+      "name": "Hub Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Hub Plugin)."
+    },
+    {
+      "name": "Hybrid Management System",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Flask management app with a custom HybridDB layer and translations."
+    },
+    {
+      "name": "Image Background Remover",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Removes image backgrounds."
+    },
+    {
+      "name": "Image Color Changer",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Recolors images."
+    },
+    {
+      "name": "Image Combiner",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Combines images."
+    },
+    {
+      "name": "Image Property",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Reads image properties."
+    },
+    {
+      "name": "Image Resizer",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Resizes images in batch."
+    },
+    {
+      "name": "Image Transparenter",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Makes image regions transparent."
+    },
+    {
+      "name": "IPLocation",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Looks up IP geolocation."
+    },
+    {
+      "name": "Item Manager",
+      "stack": "Java",
+      "year": 2025,
+      "blurb": "Minecraft server plugin (Item Manager)."
+    },
+    {
+      "name": "Key Simulator DLL",
+      "stack": "C++",
+      "year": 2025,
+      "blurb": "C++ Windows desktop experiment (Key Simulator DLL)."
+    },
+    {
+      "name": "Keyboard CPS",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Keyboard CPS / input tester."
+    },
+    {
+      "name": "Keyboard Reader",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Reads keyboard input events."
+    },
+    {
+      "name": "LAN position sync sketches",
+      "stack": "Python / Flask",
+      "year": 2024,
+      "blurb": "Shared Room1.txt / HTTP helpers for syncing two player positions on a local network.",
+      "grouped": [
+        "LocalServer",
+        "OnlineGame",
+        "AutoPiano"
+      ]
+    },
+    {
+      "name": "Launch Pad Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Launch Pad Plugin)."
+    },
+    {
+      "name": "Leaderboard Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Leaderboard Plugin)."
+    },
+    {
+      "name": "Lego EV3 serial controller",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Talks to a LEGO EV3 over a serial COM port."
+    },
+    {
+      "name": "Local Server Manager",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Manages local servers from a UI."
+    },
+    {
+      "name": "Lung tissue image classifier",
+      "stack": "Python / PyTorch",
+      "year": 2023,
+      "blurb": "PyTorch classifier over lung ACA, normal and SCC image folders."
+    },
+    {
+      "name": "Mail Sending UI",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "UI for sending mail."
+    },
+    {
+      "name": "Math Game",
+      "stack": "Python",
+      "year": 2023,
+      "blurb": "Console arithmetic drill that chains addition, subtraction, multiplication and division.",
+      "grouped": [
+        "MathGame",
+        "MathGamePre"
+      ]
+    },
+    {
+      "name": "Maze game sketches",
+      "stack": "Unity / C#",
+      "year": 2025,
+      "blurb": "Extra maze prototypes beyond the main Maze 3D card (3 folders).",
+      "grouped": [
+        "Maze Game",
+        "MazeGame2",
+        "MazeGameWeb"
+      ],
+      "covers": 3
+    },
+    {
+      "name": "MDNS",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "mDNS discovery tooling."
+    },
+    {
+      "name": "Minecraft Bot",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Python Minecraft bot."
+    },
+    {
+      "name": "Minecraft Bot AI",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "AI-driven Minecraft bot experiments."
+    },
+    {
+      "name": "Minecraft bot versions",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Series of Python Minecraft bot builds (13 folders).",
+      "grouped": [
+        "mcbot_fixed6",
+        "mcbot_srv7",
+        "mcbot_fixed",
+        "mcbot_fixed2",
+        "mcbot_fixed3",
+        "mcbot_fixed5",
+        "mcbot_srv",
+        "mcbot_srv2",
+        "mcbot_srv3",
+        "mcbot_srv4",
+        "mcbot_srv5",
+        "mcbot_srv6",
+        "mcbot"
+      ],
+      "covers": 13
+    },
+    {
+      "name": "Minecraft Cape Generator",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Generates Minecraft cape textures."
+    },
+    {
+      "name": "Minecraft Editor",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Edits Minecraft world or data files."
+    },
+    {
+      "name": "Minecraft Resource Pack Generator",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Generates Minecraft resource packs."
+    },
+    {
+      "name": "Mineflayer 2",
+      "stack": "JavaScript",
+      "year": 2026,
+      "blurb": "Second Mineflayer bot sandbox."
+    },
+    {
+      "name": "Mineflayer porting",
+      "stack": "JavaScript",
+      "year": 2026,
+      "blurb": "Porting Mineflayer helpers between JS and Python."
+    },
+    {
+      "name": "Minescript",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Python utility or experiment (Minescript)."
+    },
+    {
+      "name": "Moderation Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Moderation Plugin)."
+    },
+    {
+      "name": "Modular School Management",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Modular Flask school-management backend on GitHub. No local clone on this PC."
+    },
+    {
+      "name": "Mouse Trapper",
+      "stack": "C++",
+      "year": 2025,
+      "blurb": "C++ Windows desktop experiment (Mouse Trapper)."
+    },
+    {
+      "name": "Movement Angle Finder",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Finds movement angles for bot or aim work."
+    },
+    {
+      "name": "NBTEditor",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Edits Minecraft NBT data."
+    },
+    {
+      "name": "Network Scanner",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Scans the local network."
+    },
+    {
+      "name": "New Custom Text Editor CS",
+      "stack": "C#",
+      "year": 2026,
+      "blurb": "C# desktop experiment (New Custom Text Editor CS)."
+    },
+    {
+      "name": "Node DB",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Small node or database experiment."
+    },
+    {
+      "name": "Notifications",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Python utility or experiment (Notifications)."
+    },
+    {
+      "name": "Notifier Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Notifier Plugin)."
+    },
+    {
+      "name": "OBJ Loader",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Loads Wavefront OBJ meshes and computes normals."
+    },
+    {
+      "name": "Object Oriented CS",
+      "stack": "C#",
+      "year": 2025,
+      "blurb": "C# desktop experiment (Object Oriented CS)."
+    },
+    {
+      "name": "Onboarding Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Onboarding Plugin)."
+    },
+    {
+      "name": "One Time Algorithm",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Python utility or experiment (One Time Algorithm)."
+    },
+    {
+      "name": "OPCommands Manager",
+      "stack": "Java",
+      "year": 2025,
+      "blurb": "Minecraft server plugin (OPCommands Manager)."
+    },
+    {
+      "name": "OpenCV camera experiments",
+      "stack": "Python / OpenCV",
+      "year": 2024,
+      "blurb": "Face detection, line detection and a grayscale virtual webcam filter.",
+      "grouped": [
+        "OpencvFaceDetection",
+        "OpenCVLines",
+        "OpenCVVideoFIlter"
+      ]
+    },
+    {
+      "name": "OpenCV page and question sandbox",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "OpenCV experiments for page warp, edges, and question region detection."
+    },
+    {
+      "name": "OPItems Manager",
+      "stack": "Java",
+      "year": 2025,
+      "blurb": "Minecraft server plugin (OPItems Manager)."
+    },
+    {
+      "name": "Paper Detector",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Trains and serves models that find paper corners and page bounds in photos."
+    },
+    {
+      "name": "Paradigm Videos",
+      "stack": "HTML / JS",
+      "year": 2025,
+      "blurb": "Competition video pages."
+    },
+    {
+      "name": "PDF Editor",
+      "stack": "Java",
+      "year": 2025,
+      "blurb": "Java PDF editor experiment."
+    },
+    {
+      "name": "PDFTo Schedule",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Python utility or experiment (PDFTo Schedule)."
+    },
+    {
+      "name": "PDFTo Schedule Server",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Python utility or experiment (PDFTo Schedule Server)."
+    },
+    {
+      "name": "PDFUtilities",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Python utility or experiment (PDFUtilities)."
+    },
+    {
+      "name": "Pillow Image Rotation",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Python utility or experiment (Pillow Image Rotation)."
+    },
+    {
+      "name": "Player Menu Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Player Menu Plugin)."
+    },
+    {
+      "name": "Player Stats Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Player Stats Plugin)."
+    },
+    {
+      "name": "Plugin MC",
+      "stack": "Java",
+      "year": 2025,
+      "blurb": "Minecraft server plugin (Plugin MC)."
+    },
+    {
+      "name": "Private Vault Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Private Vault Plugin)."
+    },
+    {
+      "name": "Problem Searcher",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Searches problem sets or questions."
+    },
+    {
+      "name": "Project Lister",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Python utility or experiment (Project Lister)."
+    },
+    {
+      "name": "PVPPlugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (PVPPlugin)."
+    },
+    {
+      "name": "Py Side First Try",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Python utility or experiment (Py Side First Try)."
+    },
+    {
+      "name": "Pygame car dodge",
+      "stack": "Python / Pygame",
+      "year": 2024,
+      "blurb": "Pygame road dodge game with multiple car sprites (folder named PygameTry)."
+    },
+    {
+      "name": "Python Minigames",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Python utility or experiment (Python Minigames)."
+    },
+    {
+      "name": "QRCode Reader",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Python utility or experiment (QRCode Reader)."
+    },
+    {
+      "name": "Quests Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Quests Plugin)."
+    },
+    {
+      "name": "Ranks Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Ranks Plugin)."
+    },
+    {
+      "name": "Rock Paper Scissors",
+      "stack": "Python",
+      "year": 2023,
+      "blurb": "Bilingual console rock paper scissors (Turkish and English)."
+    },
+    {
+      "name": "Scissor Lift Algorithm",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Python utility or experiment (Scissor Lift Algorithm)."
+    },
+    {
+      "name": "Scoreboard Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Scoreboard Plugin)."
+    },
+    {
+      "name": "Server Manager",
+      "stack": "Java",
+      "year": 2025,
+      "blurb": "Minecraft server plugin (Server Manager)."
+    },
+    {
+      "name": "Shop Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Shop Plugin)."
+    },
+    {
+      "name": "Sign Manager Demo",
+      "stack": "Java",
+      "year": 2025,
+      "blurb": "Minecraft server plugin (Sign Manager Demo)."
+    },
+    {
+      "name": "Smart Tab Closer",
+      "stack": "JavaScript",
+      "year": 2026,
+      "blurb": "Chrome extension that closes tabs from a plain-English description, using on-device Gemini Nano with rule fallbacks."
+    },
+    {
+      "name": "Social Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Social Plugin)."
+    },
+    {
+      "name": "Socket Connection",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Python utility or experiment (Socket Connection)."
+    },
+    {
+      "name": "Socket Connection2",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Python utility or experiment (Socket Connection2)."
+    },
+    {
+      "name": "Socket Files",
+      "stack": "C++",
+      "year": 2025,
+      "blurb": "C++ Windows desktop experiment (Socket Files)."
+    },
+    {
+      "name": "Sound Trimmer",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Python utility or experiment (Sound Trimmer)."
+    },
+    {
+      "name": "Speech to Text assistant",
+      "stack": "Python",
+      "year": 2024,
+      "blurb": "Turkish speech recognition loop with simple voice commands."
+    },
+    {
+      "name": "Speed Plugin",
+      "stack": "Java",
+      "year": 2025,
+      "blurb": "Minecraft server plugin (Speed Plugin)."
+    },
+    {
+      "name": "Spike Prime Simulation",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Python utility or experiment (Spike Prime Simulation)."
+    },
+    {
+      "name": "Spritesheet Generator",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Python utility or experiment (Spritesheet Generator)."
+    },
+    {
+      "name": "Tab list plugins",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft tab-list plugins (2).",
+      "grouped": [
+        "TabPlugin",
+        "TabManager"
+      ],
+      "covers": 2
+    },
+    {
+      "name": "TensorFlow CIFAR experiments",
+      "stack": "Python / TensorFlow",
+      "year": 2023,
+      "blurb": "CIFAR-10 ConvLSTM style training notebook extracted from a school team pass."
+    },
+    {
+      "name": "Tic Tac Toe",
+      "stack": "C++",
+      "year": 2025,
+      "blurb": "C++ Windows desktop experiment (Tic Tac Toe)."
+    },
+    {
+      "name": "Tick Cross Detector",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "CNN that classifies tick vs cross marks on worksheet photos."
+    },
+    {
+      "name": "Tkinter Display",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Python utility or experiment (Tkinter Display)."
+    },
+    {
+      "name": "Tkinter Joystick",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Python utility or experiment (Tkinter Joystick)."
+    },
+    {
+      "name": "Tkinter Log",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Python utility or experiment (Tkinter Log)."
+    },
+    {
+      "name": "Tkinter Resize By Screen",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Python utility or experiment (Tkinter Resize By Screen)."
+    },
+    {
+      "name": "Town Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Town Plugin)."
+    },
+    {
+      "name": "Trade Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Trade Plugin)."
+    },
+    {
+      "name": "Trading Bot",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Trading bot experiment plus a backtest UI and orderbook tools (research only).",
+      "grouped": [
+        "TradingBotBacktest"
+      ],
+      "covers": 2
+    },
+    {
+      "name": "Trading Bot Dashboard",
+      "stack": "JavaScript",
+      "year": 2026,
+      "blurb": "Dashboard half of the trading bot stack on GitHub. No local clone on this PC."
+    },
+    {
+      "name": "Traffic Solver",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Python utility or experiment (Traffic Solver)."
+    },
+    {
+      "name": "Transparent PNGGenerator",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Python utility or experiment (Transparent PNGGenerator)."
+    },
+    {
+      "name": "Travel Commands",
+      "stack": "Java",
+      "year": 2025,
+      "blurb": "Minecraft server plugin (Travel Commands)."
+    },
+    {
+      "name": "Unicode Escape",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Python utility or experiment (Unicode Escape)."
+    },
+    {
+      "name": "Unicodes",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Python utility or experiment (Unicodes)."
+    },
+    {
+      "name": "Verification Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Verification Plugin)."
+    },
+    {
+      "name": "Version Manager",
+      "stack": "Java",
+      "year": 2025,
+      "blurb": "Minecraft server plugin (Version Manager)."
+    },
+    {
+      "name": "Video Background Remover",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Python utility or experiment (Video Background Remover)."
+    },
+    {
+      "name": "Voice Recorder",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Python utility or experiment (Voice Recorder)."
+    },
+    {
+      "name": "Vote Bot",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Python utility or experiment (Vote Bot)."
+    },
+    {
+      "name": "Voting Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (Voting Plugin)."
+    },
+    {
+      "name": "Watcher",
+      "stack": "JavaScript",
+      "year": 2026,
+      "blurb": "File or process watcher utility."
+    },
+    {
+      "name": "Web Game",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Python utility or experiment (Web Game)."
+    },
+    {
+      "name": "Web Scraper",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Python utility or experiment (Web Scraper)."
+    },
+    {
+      "name": "Web Server",
+      "stack": "C++",
+      "year": 2025,
+      "blurb": "C++ Windows desktop experiment (Web Server)."
+    },
+    {
+      "name": "Web Server2",
+      "stack": "C++",
+      "year": 2025,
+      "blurb": "C++ Windows desktop experiment (Web Server2)."
+    },
+    {
+      "name": "Whisper Try",
+      "stack": "Python",
+      "year": 2026,
+      "blurb": "Python utility or experiment (Whisper Try)."
+    },
+    {
+      "name": "World Settings Plugin",
+      "stack": "Java",
+      "year": 2026,
+      "blurb": "Minecraft server plugin (World Settings Plugin)."
+    },
+    {
+      "name": "wxPython Window",
+      "stack": "Python / wxPython",
+      "year": 2024,
+      "blurb": "First wxPython desktop window sketch."
+    },
+    {
+      "name": "YTMP3",
+      "stack": "Python",
+      "year": 2025,
+      "blurb": "Python utility or experiment (YTMP3)."
+    },
+    {
+      "name": "Zeytini Kurtar",
+      "stack": "Python",
+      "year": 2023,
+      "blurb": "Turkish choice based text adventure about saving the family cat Zeytin.",
+      "grouped": [
+        "ZeytiniKurtar",
+        "ZeytiniKurtar2"
+      ]
+    }
+  ]
+}

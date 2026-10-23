@@ -1,0 +1,27 @@
+{
+    "id":  "arctic-launcher-web",
+    "title":  "Arctic Launcher Website",
+    "shortDescription":  "Marketing site and docs for Arctic Launcher at arcticlauncher.com.",
+    "description":  "Next.js site for the launcher: landing page, download page with checksums, changelog from GitHub releases, and a docs host that pulls markdown from the launcher repo. Themes match the app.",
+    "languages":  [
+                      "TypeScript"
+                  ],
+    "tags":  [
+                 "Next.js",
+                 "Docs",
+                 "Landing"
+             ],
+    "category":  "web",
+    "featured":  false,
+    "highlights":  [
+                       "Download + changelog from GitHub",
+                       "Separate docs host",
+                       "Themes match the launcher"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+                  "demo":  "https://arcticlauncher.com"
+              }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "vehicle-learning",
+  "title": "Vehicle Learning",
+  "shortDescription": "Unreal Engine 5.5 project exploring Chaos Vehicles driving.",
+  "description": "Unreal Engine 5.5 project built around the Chaos Vehicles plugin, with RawInput enabled for controller work. A playground for vehicle physics and driving feel rather than a finished game.",
+  "languages": [
+    "C++",
+    "Blueprints"
+  ],
+  "tags": [
+    "Unreal Engine",
+    "Vehicles",
+    "Game",
+    "Physics"
+  ],
+  "category": "game",
+  "featured": false,
+  "highlights": [
+    "UE 5.5 Chaos Vehicles",
+    "RawInput controller support"
+  ],
+  "screenshots": [],
+  "links": {}
+}

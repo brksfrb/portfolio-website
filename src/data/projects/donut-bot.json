@@ -1,0 +1,24 @@
+{
+    "id":  "donut-bot",
+    "title":  "Donut Bot",
+    "shortDescription":  "Small Discord/bot experiment named Donut.",
+    "description":  "Node bot sketch. Lightweight command bot I used while trying bot frameworks.",
+    "languages":  [
+                      "JavaScript"
+                  ],
+    "tags":  [
+                 "Bot",
+                 "Discord"
+             ],
+    "category":  "web",
+    "featured":  false,
+    "highlights":  [
+                       "Bot experiment"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

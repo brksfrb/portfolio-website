@@ -1,0 +1,26 @@
+{
+    "id":  "scrap-car",
+    "title":  "Scrap Car",
+    "shortDescription":  "Unity car game with a scrap / wreck theme.",
+    "description":  "Unity project about driving scrap cars. Physics and vehicle feel experiments more than a polished racer.",
+    "languages":  [
+                      "C#"
+                  ],
+    "tags":  [
+                 "Unity",
+                 "Cars",
+                 "Game"
+             ],
+    "category":  "game",
+    "featured":  false,
+    "highlights":  [
+                       "Vehicle physics play",
+                       "Unity"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

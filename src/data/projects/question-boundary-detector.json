@@ -1,0 +1,26 @@
+{
+    "id":  "question-boundary-detector",
+    "title":  "Question Boundary Detector",
+    "shortDescription":  "Model that finds where each question starts and ends on photos of student sheets.",
+    "description":  "Vision model trained to mark question boundaries on scanned or photographed worksheets. Used as a building block for grading-style tools.",
+    "languages":  [
+                      "Python"
+                  ],
+    "tags":  [
+                 "Computer Vision",
+                 "Education",
+                 "Sheets"
+             ],
+    "category":  "cv",
+    "featured":  false,
+    "highlights":  [
+                       "Works from sheet photos",
+                       "Feeds into grading helpers"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

@@ -1,0 +1,24 @@
+{
+    "id":  "photo-uploader",
+    "title":  "Photo Uploader",
+    "shortDescription":  "Small web photo uploader.",
+    "description":  "Page that accepts photo uploads. Thin utility used while testing upload flows for other apps.",
+    "languages":  [
+                      "JavaScript"
+                  ],
+    "tags":  [
+                 "Web",
+                 "Upload"
+             ],
+    "category":  "web",
+    "featured":  false,
+    "highlights":  [
+                       "Upload flow helper"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

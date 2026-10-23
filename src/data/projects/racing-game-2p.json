@@ -1,0 +1,26 @@
+{
+    "id":  "racing-game-2p",
+    "title":  "Racing Game 2 Player",
+    "shortDescription":  "Local two-player racing game in Unity.",
+    "description":  "Unity racing game meant for two players on the same machine. Simple tracks and shared-screen play.",
+    "languages":  [
+                      "C#"
+                  ],
+    "tags":  [
+                 "Unity",
+                 "Racing",
+                 "Local Multiplayer"
+             ],
+    "category":  "game",
+    "featured":  false,
+    "highlights":  [
+                       "Local 2-player",
+                       "Unity"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

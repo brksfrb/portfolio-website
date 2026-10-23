@@ -1,0 +1,25 @@
+{
+    "id":  "custom-text-generator",
+    "title":  "Custom Text Generator",
+    "shortDescription":  "C++ tool that generates custom text / styled output.",
+    "description":  "Desktop utility for generating text in custom styles. Small helper from the C++ desktop experiments pile.",
+    "languages":  [
+                      "C++"
+                  ],
+    "tags":  [
+                 "Text",
+                 "Generator",
+                 "Desktop"
+             ],
+    "category":  "desktop",
+    "featured":  false,
+    "highlights":  [
+                       "Text generation helper"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

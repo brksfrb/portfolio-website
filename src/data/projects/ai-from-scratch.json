@@ -6,8 +6,7 @@
   "languages": ["Python"],
   "tags": ["Machine Learning", "Reinforcement Learning", "AI", "From Scratch", "Performance"],
   "category": "ai",
-  "featured": true,
-  "featuredOrder": 3,
+  "featured": false,
   "highlights": [
     "No ML library dependencies",
     "Custom gradient descent & backpropagation",

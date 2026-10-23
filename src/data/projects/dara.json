@@ -1,0 +1,25 @@
+{
+    "id":  "dara",
+    "title":  "DARA",
+    "shortDescription":  "Python research/demo project (DARA). Local experiments with a trimmed public demo repo.",
+    "description":  "Python project I used for research demos. There is a smaller demo-oriented copy of the code; the main tree stays private.",
+    "languages":  [
+                      "Python"
+                  ],
+    "tags":  [
+                 "Research",
+                 "Demo",
+                 "Python"
+             ],
+    "category":  "ai",
+    "featured":  false,
+    "highlights":  [
+                       "Python research demo"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

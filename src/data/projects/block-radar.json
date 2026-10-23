@@ -1,0 +1,28 @@
+{
+    "id":  "block-radar",
+    "title":  "BlockRadar",
+    "shortDescription":  "Minecraft plugin that searches for player bases and dug areas. Built to actually find stuff on big survival maps.",
+    "description":  "Server plugin focused on finding bases and unnatural digs. Tuned for real moderation use on survival servers rather than pretty demos.",
+    "languages":  [
+                      "Java"
+                  ],
+    "tags":  [
+                 "Minecraft",
+                 "Plugin",
+                 "Anti-grief",
+                 "Search"
+             ],
+    "category":  "plugin",
+    "featured":  true,
+    "featuredOrder":  6,
+    "highlights":  [
+                       "Base and dig search",
+                       "Built for real moderation"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

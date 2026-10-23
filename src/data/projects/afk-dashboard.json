@@ -1,0 +1,26 @@
+{
+    "id":  "afk-dashboard",
+    "title":  "AFK Dashboard",
+    "shortDescription":  "Desktop dashboard for AFK / status style info.",
+    "description":  "C# desktop app that shows AFK-related status in one place. Small utility, not a store app.",
+    "languages":  [
+                      "C#"
+                  ],
+    "tags":  [
+                 "WinUI",
+                 "Desktop",
+                 "Dashboard"
+             ],
+    "category":  "desktop",
+    "featured":  false,
+    "highlights":  [
+                       "Desktop utility",
+                       "C#"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

@@ -1,0 +1,24 @@
+{
+    "id":  "crux-engine",
+    "title":  "Crux Engine",
+    "shortDescription":  "JavaScript engine experiment named Crux.",
+    "description":  "JS project exploring engine-style structure. More of a sandbox than something I shipped.",
+    "languages":  [
+                      "JavaScript"
+                  ],
+    "tags":  [
+                 "Engine",
+                 "Experiment"
+             ],
+    "category":  "web",
+    "featured":  false,
+    "highlights":  [
+                       "Engine sandbox"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

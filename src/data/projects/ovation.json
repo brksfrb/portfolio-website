@@ -1,0 +1,26 @@
+{
+    "id":  "ovation",
+    "title":  "Ovation",
+    "shortDescription":  "Group greeting cards that everyone can sign.",
+    "description":  "Next.js app where you make a card, share it, and people add their signatures. Uses Supabase and a small analytics backend.",
+    "languages":  [
+                      "TypeScript"
+                  ],
+    "tags":  [
+                 "Next.js",
+                 "Supabase",
+                 "Cards"
+             ],
+    "category":  "web",
+    "featured":  false,
+    "highlights":  [
+                       "Shared signing flow",
+                       "Next.js + Supabase"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

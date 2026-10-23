@@ -1,0 +1,26 @@
+{
+    "id":  "mouse-icon-changer",
+    "title":  "Mouse Icon Changer",
+    "shortDescription":  "C++ utility that changes the mouse cursor icon.",
+    "description":  "Small Windows tool for swapping the cursor. Useful while testing custom .cur files for other apps.",
+    "languages":  [
+                      "C++"
+                  ],
+    "tags":  [
+                 "Windows",
+                 "Cursor",
+                 "Utility"
+             ],
+    "category":  "desktop",
+    "featured":  false,
+    "highlights":  [
+                       "Custom cursors",
+                       "Windows API"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

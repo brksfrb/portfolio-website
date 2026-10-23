@@ -1,0 +1,24 @@
+{
+    "id":  "super-pro-max-game",
+    "title":  "Super Pro Max Game",
+    "shortDescription":  "Unity game project with a joke name and a real playable loop.",
+    "description":  "Unity game I built under a silly working title. Playable prototype with its own mechanics pass.",
+    "languages":  [
+                      "C#"
+                  ],
+    "tags":  [
+                 "Unity",
+                 "Game"
+             ],
+    "category":  "game",
+    "featured":  false,
+    "highlights":  [
+                       "Unity playable prototype"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

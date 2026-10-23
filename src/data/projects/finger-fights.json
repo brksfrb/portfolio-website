@@ -1,0 +1,26 @@
+{
+    "id":  "finger-fights",
+    "title":  "Finger Fights",
+    "shortDescription":  "Unity finger-fight style game prototype.",
+    "description":  "Unity game where fights are driven by finger gestures / taps. Prototype with a separate mechanics sandbox project alongside it.",
+    "languages":  [
+                      "C#"
+                  ],
+    "tags":  [
+                 "Unity",
+                 "Mobile",
+                 "Game"
+             ],
+    "category":  "game",
+    "featured":  false,
+    "highlights":  [
+                       "Unity prototype",
+                       "Gesture / tap combat feel"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

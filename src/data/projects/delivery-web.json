@@ -1,0 +1,25 @@
+{
+    "id":  "delivery-web",
+    "title":  "Delivery Web App",
+    "shortDescription":  "Browser delivery-app prototype.",
+    "description":  "Front-end sketch of a delivery flow. Pages for browsing and placing an order, not wired to a real logistics backend.",
+    "languages":  [
+                      "JavaScript"
+                  ],
+    "tags":  [
+                 "Web",
+                 "Delivery",
+                 "Prototype"
+             ],
+    "category":  "web",
+    "featured":  false,
+    "highlights":  [
+                       "Web prototype"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

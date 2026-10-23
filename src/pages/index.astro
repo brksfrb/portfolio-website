@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import Stats from '../components/Stats.astro';
+import archiveData from '../data/archive.json';
 
 // Load all project JSON files
 const projectFiles = [
@@ -9,6 +10,7 @@ const projectFiles = [
     ...(await Astro.glob('../data/projects/*.ts')),
 ];
 const allProjects = projectFiles.map((f) => f.default);
+const totalProjectCount = allProjects.length + archiveData.entries.length;
 
 // Featured projects sorted by featuredOrder
 const featuredProjects = allProjects
@@ -28,7 +30,7 @@ const languages = [
 ];
 ---
 
-<Layout title="Portfolio — Developer" description="Full-stack developer with 300+ projects across 10+ languages.">
+<Layout title="Portfolio — Developer" description="Full-stack developer. 300+ projects built across 10+ languages.">
     <!-- HERO -->
     <section class="hero">
         <div class="hero-bg">
@@ -63,7 +65,7 @@ const languages = [
                 <div class="hero-stat-divider"></div>
                 <div class="hero-stat">
                     <span class="hero-stat-value">300+</span>
-                    <span class="hero-stat-label">total projects</span>
+                    <span class="hero-stat-label">built over the years</span>
                 </div>
                 <div class="hero-stat-divider"></div>
                 <div class="hero-stat">
@@ -72,7 +74,7 @@ const languages = [
                 </div>
                 <div class="hero-stat-divider"></div>
                 <div class="hero-stat">
-                    <span class="hero-stat-value">10K+</span>
+                    <span class="hero-stat-value">15K+</span>
                     <span class="hero-stat-label">app installs</span>
                 </div>
             </div>
@@ -90,8 +92,8 @@ const languages = [
             </div>
 
             <div class="terminal-ticker">
-                <span class="ticker-prefix">$ ls ~/projects | wc -l</span>
-                <span class="ticker-value">300+</span>
+                <span class="ticker-prefix">$ # lifetime build count</span>
+                <span class="ticker-value">300+ built</span>
                 <span class="ticker-cursor">▋</span>
             </div>
         </div>
@@ -173,7 +175,7 @@ const languages = [
                     <span class="mono-dim">// featured_projects.filter(p =&gt; p.highlight)</span>
                 </div>
                 <h2 class="section-title">Selected Work</h2>
-                <p class="section-sub">Hand-picked from 300+ projects. Built for real users, real problems.</p>
+                <p class="section-sub">Hand-picked cards, plus a full archive on the projects page. I have built 300+ over the years. Some are private or client work, so they're not listed here.</p>
             </div>
 
             <div class="featured-grid">
@@ -184,7 +186,7 @@ const languages = [
 
             <div class="view-all-wrap">
                 <a href="/projects" class="view-all-link">
-                    <span class="mono-dim">See all</span> 300+ projects
+                    <span class="mono-dim">See all</span> {totalProjectCount} projects
                     <span class="arrow">→</span>
                 </a>
             </div>

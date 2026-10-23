@@ -1,0 +1,25 @@
+{
+    "id":  "loop-it",
+    "title":  "Loop It",
+    "shortDescription":  "Unity game built around a looping mechanic.",
+    "description":  "Unity prototype named Loop It. Centered on a repeating / loop gameplay idea.",
+    "languages":  [
+                      "C#"
+                  ],
+    "tags":  [
+                 "Unity",
+                 "Loop",
+                 "Game"
+             ],
+    "category":  "game",
+    "featured":  false,
+    "highlights":  [
+                       "Unity prototype"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

@@ -1,0 +1,25 @@
+{
+    "id":  "city-game",
+    "title":  "City Game",
+    "shortDescription":  "Unity city game prototype.",
+    "description":  "Unity project set in a city environment. Exploration / playable sketch rather than a finished release.",
+    "languages":  [
+                      "C#"
+                  ],
+    "tags":  [
+                 "Unity",
+                 "City",
+                 "Game"
+             ],
+    "category":  "game",
+    "featured":  false,
+    "highlights":  [
+                       "Unity city setting"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

@@ -1,0 +1,29 @@
+{
+    "id":  "polarium",
+    "title":  "Polarium",
+    "shortDescription":  "Fabric mod that makes huge player crowds cheaper to render by batching on the GPU and spreading work across CPU cores.",
+    "description":  "Minecraft Fabric mod for dense multiplayer. Other players get drawn with instanced GPU batches, and entity render-state work runs on helper threads. Works in any launcher. Used to be called Polonium.",
+    "languages":  [
+                      "Java"
+                  ],
+    "tags":  [
+                 "Minecraft",
+                 "Fabric",
+                 "Rendering",
+                 "Performance"
+             ],
+    "category":  "plugin",
+    "featured":  true,
+    "featuredOrder":  3,
+    "highlights":  [
+                       "GPU-batched player rendering",
+                       "Multi-threaded entity work",
+                       "Works in any launcher"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+                  "github":  "https://github.com/brksfrb/polarium"
+              }
+}

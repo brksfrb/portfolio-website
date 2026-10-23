@@ -1,0 +1,24 @@
+{
+    "id":  "sound-player",
+    "title":  "Sound Player",
+    "shortDescription":  "Simple C++ sound player.",
+    "description":  "Minimal Windows sound player. Built while learning audio APIs, still sits around as a tiny utility.",
+    "languages":  [
+                      "C++"
+                  ],
+    "tags":  [
+                 "Audio",
+                 "Desktop"
+             ],
+    "category":  "desktop",
+    "featured":  false,
+    "highlights":  [
+                       "Minimal audio player"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

@@ -1,0 +1,25 @@
+{
+    "id":  "idea-generator",
+    "title":  "Idea Generator",
+    "shortDescription":  "Small Python tool that spits out project ideas when I am stuck on what to build next.",
+    "description":  "Local idea generator I wrote for myself. Gives me prompts and angles when the blank page wins. Not a product, just a helper I keep around.",
+    "languages":  [
+                      "Python"
+                  ],
+    "tags":  [
+                 "CLI",
+                 "Ideas",
+                 "Tooling"
+             ],
+    "category":  "web",
+    "featured":  false,
+    "highlights":  [
+                       "Personal brainstorming helper"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

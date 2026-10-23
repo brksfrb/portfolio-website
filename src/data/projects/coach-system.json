@@ -7,7 +7,7 @@
   "tags": ["Flask", "Web", "Audio Processing", "OOP", "Real-World"],
   "category": "web",
   "featured": true,
-  "featuredOrder": 4,
+  "featuredOrder": 9,
   "highlights": [
     "Clean backend with separation of logic",
     "Clean and modern UI, unlike old systems",

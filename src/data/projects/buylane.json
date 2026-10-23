@@ -1,0 +1,25 @@
+{
+    "id":  "buylane",
+    "title":  "BuyLane",
+    "shortDescription":  "Marketplace experiment in Next.js. Early product sketch, not launched.",
+    "description":  "Web marketplace prototype I started in Next.js. Still an experiment rather than a live store.",
+    "languages":  [
+                      "TypeScript"
+                  ],
+    "tags":  [
+                 "Next.js",
+                 "Marketplace",
+                 "Experiment"
+             ],
+    "category":  "web",
+    "featured":  false,
+    "highlights":  [
+                       "Next.js prototype"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

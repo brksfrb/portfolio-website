@@ -1,0 +1,22 @@
+{
+  "id": "happy-city",
+  "title": "Happy City",
+  "shortDescription": "Unity city builder style game with custom sprites and scenes.",
+  "description": "Unity game with player frames, coin frames, structure art, animators and multiple scenes. A small city style project with collectible and building flavored assets.",
+  "languages": [
+    "C#"
+  ],
+  "tags": [
+    "Unity",
+    "Game",
+    "City"
+  ],
+  "category": "game",
+  "featured": false,
+  "highlights": [
+    "Custom sprite and structure art",
+    "Scenes, animators and scripts"
+  ],
+  "screenshots": [],
+  "links": {}
+}

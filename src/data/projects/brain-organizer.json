@@ -6,7 +6,7 @@
   "languages": ["TypeScript"],
   "tags": ["Next.js", "Supabase", "PWA", "Productivity", "Full Stack", "Push Notifications"],
   "category": "productivity",
-  "featured": true,
+  "featured": false,
   "highlights": [
     "Real-time sync across iOS and desktop via Supabase Realtime",
     "Per-project daily logs with timeline view",

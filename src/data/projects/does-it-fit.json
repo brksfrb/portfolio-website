@@ -1,0 +1,29 @@
+{
+    "id":  "does-it-fit",
+    "title":  "Does It Fit?",
+    "shortDescription":  "Paste a product (link, photo, or name), say what you need it for, and get a yes / maybe / no with a short reason.",
+    "description":  "Next.js app that answers one question: will this product actually meet my need? You give a product and a free-text need. It returns a verdict, a 0-100 fit score, a short reason, and pros/cons columns. Gemini runs behind a server route.",
+    "languages":  [
+                      "TypeScript"
+                  ],
+    "tags":  [
+                 "Next.js",
+                 "AI",
+                 "Shopping",
+                 "Product Fit"
+             ],
+    "category":  "web",
+    "featured":  true,
+    "featuredOrder":  7,
+    "highlights":  [
+                       "Link, photo, or typed product",
+                       "Fit score plus plain-language reason",
+                       "Next.js + Gemini"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

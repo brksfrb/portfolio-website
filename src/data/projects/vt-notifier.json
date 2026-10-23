@@ -1,0 +1,26 @@
+{
+    "id":  "vt-notifier",
+    "title":  "VirusTotal Notifier",
+    "shortDescription":  "Background helper that talks to the VirusTotal API.",
+    "description":  "Small Python service around the VirusTotal API for background checks. Useful when I want VT results without babysitting the website.",
+    "languages":  [
+                      "Python"
+                  ],
+    "tags":  [
+                 "VirusTotal",
+                 "API",
+                 "Background"
+             ],
+    "category":  "networking",
+    "featured":  false,
+    "highlights":  [
+                       "VirusTotal API wrapper",
+                       "Runs in the background"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+                  "github":  "https://github.com/brksfrb/notifier-vt-background"
+              }
+}

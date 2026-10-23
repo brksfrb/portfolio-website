@@ -1,0 +1,29 @@
+{
+    "id":  "protocolmc-plugins",
+    "title":  "ProtocolMC Plugins",
+    "shortDescription":  "Custom plugin set that runs protocolmc.net: shared core, scoreboards, lobby gadgets, and a fast schematic builder.",
+    "description":  "Source for the plugins on the ProtocolMC network (Purpur). Includes a shared core library, config-driven scoreboards, placeable lobby gadgets, and BuildX which loads big .yml builds at high block rates. Built for the live servers, not as demos.",
+    "languages":  [
+                      "Java"
+                  ],
+    "tags":  [
+                 "Minecraft",
+                 "Purpur",
+                 "Server",
+                 "Network"
+             ],
+    "category":  "plugin",
+    "featured":  true,
+    "featuredOrder":  5,
+    "highlights":  [
+                       "Live on protocolmc.net",
+                       "Shared core used by the other plugins",
+                       "BuildX for huge schematic loads"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

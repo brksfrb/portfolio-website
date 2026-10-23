@@ -1,0 +1,26 @@
+{
+    "id":  "many-minecraft-bots",
+    "title":  "Many Minecraft Bots",
+    "shortDescription":  "Tooling for running a bunch of Mineflayer bots at once.",
+    "description":  "Node projects for spinning up and controlling multiple Minecraft bots together. Related to the AI Minecraft bot work, but focused on scale and orchestration.",
+    "languages":  [
+                      "JavaScript"
+                  ],
+    "tags":  [
+                 "Minecraft",
+                 "Bots",
+                 "Mineflayer"
+             ],
+    "category":  "ai",
+    "featured":  false,
+    "highlights":  [
+                       "Multi-bot orchestration",
+                       "Mineflayer"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

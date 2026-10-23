@@ -1,0 +1,24 @@
+{
+    "id":  "puzzle-game",
+    "title":  "Puzzle Game",
+    "shortDescription":  "Unity puzzle game.",
+    "description":  "Unity puzzle project. Small self-contained puzzle loop.",
+    "languages":  [
+                      "C#"
+                  ],
+    "tags":  [
+                 "Unity",
+                 "Puzzle"
+             ],
+    "category":  "game",
+    "featured":  false,
+    "highlights":  [
+                       "Unity puzzle loop"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

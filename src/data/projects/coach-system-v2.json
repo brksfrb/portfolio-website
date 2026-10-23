@@ -1,0 +1,29 @@
+{
+    "id":  "coach-system-v2",
+    "title":  "Coach System V2",
+    "shortDescription":  "Rewrite of Coach System with AI topic extraction and a Flutter frontend.",
+    "description":  "Second version of the tutor/teacher management app. Backend still Python; frontend moved toward Flutter. Adds AI-assisted topic and subject extraction on top of the student/homework flows from v1.",
+    "languages":  [
+                      "Python",
+                      "Dart"
+                  ],
+    "tags":  [
+                 "Flask",
+                 "Flutter",
+                 "Education",
+                 "AI"
+             ],
+    "category":  "web",
+    "featured":  false,
+    "highlights":  [
+                       "AI topic extraction",
+                       "Flutter frontend",
+                       "Follow-up to the original Coach System"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

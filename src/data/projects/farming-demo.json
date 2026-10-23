@@ -1,0 +1,25 @@
+{
+    "id":  "farming-demo",
+    "title":  "Farming Demo",
+    "shortDescription":  "Small farming website demo. More of a UI/playable sketch than a full game.",
+    "description":  "Browser farming demo I put together to try out the loop and the look. Not a shipped product, just a playable web sketch.",
+    "languages":  [
+                      "JavaScript"
+                  ],
+    "tags":  [
+                 "Demo",
+                 "Web",
+                 "Game-like"
+             ],
+    "category":  "web",
+    "featured":  false,
+    "highlights":  [
+                       "Playable in the browser"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

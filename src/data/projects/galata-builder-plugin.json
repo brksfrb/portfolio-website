@@ -1,0 +1,26 @@
+{
+    "id":  "galata-builder-plugin",
+    "title":  "Galata Builder Plugin",
+    "shortDescription":  "Minecraft plugin for loading builds on GalataMC-style servers.",
+    "description":  "Builder-focused Bukkit/Gradle plugin used when placing large builds on the Galata side of things. Sibling energy to Protocol BuildX, separate codebase.",
+    "languages":  [
+                      "Java"
+                  ],
+    "tags":  [
+                 "Minecraft",
+                 "Builder",
+                 "Schematic"
+             ],
+    "category":  "plugin",
+    "featured":  false,
+    "highlights":  [
+                       "Large build loading",
+                       "Server plugin"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

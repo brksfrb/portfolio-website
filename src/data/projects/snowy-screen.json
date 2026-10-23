@@ -1,0 +1,26 @@
+{
+    "id":  "snowy-screen",
+    "title":  "Snowy Screen",
+    "shortDescription":  "C++ desktop effect that puts falling snow on your screen.",
+    "description":  "Windows desktop toy. Draws falling snow over the screen. Same family of silly desktop overlays as the gravity and fairy-wheel projects.",
+    "languages":  [
+                      "C++"
+                  ],
+    "tags":  [
+                 "Desktop",
+                 "Overlay",
+                 "Windows"
+             ],
+    "category":  "desktop",
+    "featured":  false,
+    "highlights":  [
+                       "Desktop overlay",
+                       "C++"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

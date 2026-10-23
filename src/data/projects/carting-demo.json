@@ -1,0 +1,23 @@
+{
+  "id": "carting-demo",
+  "title": "Carting Demo",
+  "shortDescription": "Unity karting demo with a packaged WebGL build.",
+  "description": "Unity karting style demo that went far enough to produce a WebGL build zip for sharing. Small racing playground rather than a full career mode.",
+  "languages": [
+    "C#"
+  ],
+  "tags": [
+    "Unity",
+    "WebGL",
+    "Racing",
+    "Game"
+  ],
+  "category": "game",
+  "featured": false,
+  "highlights": [
+    "Unity karting prototype",
+    "WebGL build packaged for sharing"
+  ],
+  "screenshots": [],
+  "links": {}
+}

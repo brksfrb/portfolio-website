@@ -1,0 +1,26 @@
+{
+    "id":  "pdf-to-schedule",
+    "title":  "PDF to Schedule",
+    "shortDescription":  "Flutter app that turns a PDF schedule into something the phone can actually use.",
+    "description":  "Flutter project for parsing schedule PDFs into a usable timetable. Aimed at students or teachers who get stuck with weekly PDF grids.",
+    "languages":  [
+                      "Flutter"
+                  ],
+    "tags":  [
+                 "Flutter",
+                 "PDF",
+                 "Schedule"
+             ],
+    "category":  "mobile",
+    "featured":  false,
+    "highlights":  [
+                       "Flutter",
+                       "PDF in, schedule out"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

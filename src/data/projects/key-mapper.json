@@ -1,0 +1,26 @@
+{
+    "id":  "key-mapper",
+    "title":  "Key Mapper",
+    "shortDescription":  "C++ key remapper for Windows.",
+    "description":  "Remaps keys at a low level on Windows. Handy when a game or layout needs a quick remap without a full remapping suite.",
+    "languages":  [
+                      "C++"
+                  ],
+    "tags":  [
+                 "Windows",
+                 "Input",
+                 "Utility"
+             ],
+    "category":  "desktop",
+    "featured":  false,
+    "highlights":  [
+                       "Low-level remaps",
+                       "Windows"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

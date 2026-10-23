@@ -1,0 +1,27 @@
+{
+    "id":  "scripter",
+    "title":  "Scripter",
+    "shortDescription":  "Forge 1.8.9 mod that lets you script in-game behavior.",
+    "description":  "Minecraft Forge mod for 1.8.9. Users write scripts that run inside the client to automate or customize what the game does.",
+    "languages":  [
+                      "Java"
+                  ],
+    "tags":  [
+                 "Minecraft",
+                 "Forge",
+                 "1.8.9",
+                 "Scripting"
+             ],
+    "category":  "plugin",
+    "featured":  false,
+    "highlights":  [
+                       "Forge 1.8.9",
+                       "In-game scripting"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

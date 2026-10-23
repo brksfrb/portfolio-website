@@ -1,0 +1,29 @@
+{
+    "id":  "quick-replay",
+    "title":  "Quick Replay",
+    "shortDescription":  "Instant replay and screen recording for Windows in one small Rust exe. No installer, no ffmpeg.",
+    "description":  "Tray app that keeps the last N seconds of your screen in RAM already compressed, then dumps a clip when you hit a shortcut. Also does normal recordings with optional mic and system audio. Uses Windows hardware encoders (NVENC, AMF, Quick Sync). Crash-safe segmented writes and a small library/player for clipping.",
+    "languages":  [
+                      "Rust"
+                  ],
+    "tags":  [
+                 "Screen Recording",
+                 "Windows",
+                 "Tray App",
+                 "NVENC"
+             ],
+    "category":  "desktop",
+    "featured":  true,
+    "featuredOrder":  4,
+    "highlights":  [
+                       "Instant replay from RAM",
+                       "Hardware encode, no ffmpeg",
+                       "Crash-safe recordings"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+                  "github":  "https://github.com/brksfrb/quick-replay"
+              }
+}

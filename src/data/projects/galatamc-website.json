@@ -1,0 +1,25 @@
+{
+    "id":  "galatamc-website",
+    "title":  "GalataMC Website",
+    "shortDescription":  "Website for the GalataMC Minecraft server.",
+    "description":  "Next.js site for GalataMC. Info and entry point for the server brand.",
+    "languages":  [
+                      "TypeScript"
+                  ],
+    "tags":  [
+                 "Next.js",
+                 "Minecraft",
+                 "Server"
+             ],
+    "category":  "web",
+    "featured":  false,
+    "highlights":  [
+                       "Server website"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

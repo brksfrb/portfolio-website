@@ -1,0 +1,25 @@
+{
+    "id":  "minecraft-launcher-comparison",
+    "title":  "Minecraft Launcher Comparison",
+    "shortDescription":  "Notes on how different Minecraft launchers compare.",
+    "description":  "Public notes repo where I compared Minecraft launchers. More research writing than an app.",
+    "languages":  [
+                      "JavaScript"
+                  ],
+    "tags":  [
+                 "Minecraft",
+                 "Research",
+                 "Notes"
+             ],
+    "category":  "desktop",
+    "featured":  false,
+    "highlights":  [
+                       "Public comparison notes"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+                  "github":  "https://github.com/brksfrb/MinecraftLauncherComparison"
+              }
+}

@@ -2,7 +2,10 @@
 import Layout from '../../layouts/Layout.astro';
 
 export async function getStaticPaths() {
-    const projectFiles = await Astro.glob('../../data/projects/*.json');
+    const projectFiles = [
+        ...(await Astro.glob('../../data/projects/*.json')),
+        ...(await Astro.glob('../../data/projects/*.ts')),
+    ];
     return projectFiles.map(f => ({
         params: { id: f.default.id },
         props: { project: f.default },

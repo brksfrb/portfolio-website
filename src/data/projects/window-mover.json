@@ -1,0 +1,25 @@
+{
+    "id":  "window-mover",
+    "title":  "Window Mover",
+    "shortDescription":  "C++ utility that moves and positions windows.",
+    "description":  "Moves windows around programmatically on Windows. Useful for multi-monitor setups and automation tests.",
+    "languages":  [
+                      "C++"
+                  ],
+    "tags":  [
+                 "Windows",
+                 "Window Management"
+             ],
+    "category":  "desktop",
+    "featured":  false,
+    "highlights":  [
+                       "Window positioning",
+                       "Windows API"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

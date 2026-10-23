@@ -1,0 +1,26 @@
+{
+    "id":  "botpvp",
+    "title":  "BotPvP",
+    "shortDescription":  "Rust project around Minecraft PvP bot behavior.",
+    "description":  "Rust work on PvP-oriented Minecraft bot logic. Experimental, not a public server product.",
+    "languages":  [
+                      "Rust"
+                  ],
+    "tags":  [
+                 "Minecraft",
+                 "PvP",
+                 "Rust"
+             ],
+    "category":  "game",
+    "featured":  false,
+    "highlights":  [
+                       "Rust",
+                       "PvP bot experiments"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

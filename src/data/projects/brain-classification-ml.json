@@ -1,0 +1,25 @@
+{
+  "id": "brain-classification-ml",
+  "title": "Brain Tumor MRI Classifier",
+  "shortDescription": "TensorFlow CNN that classifies brain MRI slices, with LIME explanations.",
+  "description": "Deep learning pipeline that trains on brain MRI tumor and no-tumor datasets, reports GPU availability, and uses LIME image explanations to show which regions drove a prediction. School era TensorFlow work kept as a full training script with real image folders.",
+  "languages": [
+    "Python"
+  ],
+  "tags": [
+    "TensorFlow",
+    "CNN",
+    "Medical Imaging",
+    "LIME",
+    "AI"
+  ],
+  "category": "ai",
+  "featured": false,
+  "highlights": [
+    "Tumor vs no-tumor MRI training",
+    "LIME visual explanations",
+    "GPU-aware TensorFlow setup"
+  ],
+  "screenshots": [],
+  "links": {}
+}

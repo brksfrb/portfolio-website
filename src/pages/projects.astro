@@ -1,12 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
+import archiveData from '../data/archive.json';
 
-const projectFiles = await Astro.glob('../data/projects/*.json');
+const projectFiles = [
+    ...(await Astro.glob('../data/projects/*.json')),
+    ...(await Astro.glob('../data/projects/*.ts')),
+];
 const allProjects = projectFiles.map(f => f.default);
+const archiveEntries = archiveData.entries;
+const totalProjectCount = allProjects.length + archiveEntries.length;
 
-const categories = ['all', 'web', 'desktop', 'game', 'ai', 'cv', 'hardware', 'networking', 'mobile', 'plugin'];
-const languages = ['all', 'Python', 'C++', 'C#', 'Rust', 'Java', 'JavaScript', 'Flutter'];
+const categories = ['all', 'web', 'desktop', 'game', 'ai', 'cv', 'hardware', 'networking', 'mobile', 'plugin', 'productivity'];
+const languages = ['all', 'Python', 'C++', 'C#', 'Rust', 'Java', 'JavaScript', 'TypeScript', 'Flutter', 'Kotlin'];
 
 // Count by category and language for display
 const catCounts: Record<string, number> = { all: allProjects.length };
@@ -20,14 +26,14 @@ allProjects.forEach(p => {
 });
 ---
 
-<Layout title="All Projects — Portfolio" description="Browse 300+ projects across 10+ languages.">
+<Layout title="All Projects - Portfolio" description={`Browse ${totalProjectCount} projects across 10+ languages.`}>
     <section class="projects-page">
         <div class="container">
             <div class="page-header">
                 <span class="mono-dim">// projects/index</span>
                 <h1 class="page-title">All Projects</h1>
                 <p class="page-sub">
-                    A curated selection of work. The full catalog is 300+ deep across Python, C++, C#, Rust, Unity, Java, and more.
+                    {totalProjectCount} projects here ({allProjects.length} with full cards, {archiveEntries.length} in the archive). I have built 300+ over the years across Python, C++, C#, Rust, Unity, Java, and more. Some are private or client work, so they're not listed here.
                 </p>
             </div>
 
@@ -82,6 +88,49 @@ allProjects.forEach(p => {
                         </div>
                 ))}
             </div>
+
+
+            <!-- ARCHIVE -->
+            <section class="archive-section" id="archive">
+                <div class="archive-header">
+                    <span class="mono-dim">// archive</span>
+                    <h2 class="archive-title">Everything else</h2>
+                    <p class="archive-sub">
+                        {archiveEntries.length} more real projects that did not get a full card. Micro plugins, older sketches, and duplicates folded into one row. No screenshots.
+                    </p>
+                </div>
+                <div class="archive-table-wrap">
+                    <table class="archive-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Stack</th>
+                                <th>Year</th>
+                                <th>About</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {archiveEntries.map((row) => (
+                                <tr>
+                                    <td class="arch-name">
+                                        {row.github ? (
+                                            <a href={row.github} target="_blank" rel="noopener noreferrer">{row.name}</a>
+                                        ) : (
+                                            row.name
+                                        )}
+                                        {row.covers && row.covers > 1 && (
+                                            <span class="arch-covers" title={(row.grouped || []).join(', ')}>×{row.covers}</span>
+                                        )}
+                                    </td>
+                                    <td class="arch-stack">{row.stack}</td>
+                                    <td class="arch-year">{row.year ?? '-'}</td>
+                                    <td class="arch-blurb">{row.blurb}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
             <!-- EMPTY STATE -->
             <div class="empty-state" id="empty-state" style="display:none">
@@ -268,4 +317,89 @@ allProjects.forEach(p => {
     }
 
     .empty-icon { font-size: 2rem; }
+
+    .archive-section {
+        margin-top: 4rem;
+        padding-top: 3rem;
+        border-top: 1px solid var(--border);
+    }
+    .archive-header { margin-bottom: 1.5rem; }
+    .archive-title {
+        font-family: var(--font-display);
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        font-weight: 800;
+        color: var(--text);
+        margin-top: 0.4rem;
+    }
+    .archive-sub {
+        font-size: 0.95rem;
+        color: var(--text-dim);
+        margin-top: 0.5rem;
+        max-width: 640px;
+        line-height: 1.6;
+    }
+    .archive-table-wrap {
+        overflow-x: auto;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--surface);
+    }
+    .archive-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.85rem;
+    }
+    .archive-table th {
+        text-align: left;
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--text-muted);
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid var(--border);
+        background: var(--bg-1);
+        white-space: nowrap;
+    }
+    .archive-table td {
+        padding: 0.65rem 1rem;
+        border-bottom: 1px solid var(--border);
+        color: var(--text-dim);
+        vertical-align: top;
+    }
+    .archive-table tr:last-child td { border-bottom: none; }
+    .archive-table tr:hover td { background: rgba(0, 212, 255, 0.03); }
+    .arch-name {
+        font-weight: 600;
+        color: var(--text);
+        white-space: nowrap;
+    }
+    .arch-name a { color: var(--accent); text-decoration: none; }
+    .arch-name a:hover { text-decoration: underline; }
+    .arch-covers {
+        margin-left: 0.4rem;
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        color: var(--text-muted);
+        background: var(--bg-2);
+        padding: 0.1rem 0.35rem;
+        border-radius: 3px;
+    }
+    .arch-stack {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--accent);
+        white-space: nowrap;
+    }
+    .arch-year {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        white-space: nowrap;
+    }
+    .arch-blurb {
+        line-height: 1.45;
+        max-width: 520px;
+    }
+
 </style>

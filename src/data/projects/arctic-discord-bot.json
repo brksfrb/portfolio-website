@@ -1,0 +1,25 @@
+{
+    "id":  "arctic-discord-bot",
+    "title":  "Arctic Discord Bot",
+    "shortDescription":  "Discord bot for the Arctic Launcher community.",
+    "description":  "TypeScript Discord bot used on the Arctic Launcher server for community helpers and launcher-related commands.",
+    "languages":  [
+                      "TypeScript"
+                  ],
+    "tags":  [
+                 "Discord",
+                 "Bot",
+                 "Community"
+             ],
+    "category":  "web",
+    "featured":  false,
+    "highlights":  [
+                       "Runs for the launcher community"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

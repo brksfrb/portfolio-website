@@ -1,0 +1,25 @@
+{
+    "id":  "messaging-app-web",
+    "title":  "Messaging App",
+    "shortDescription":  "Browser messaging UI prototype.",
+    "description":  "Simple web messaging interface I built to practice real-time-ish chat layouts. Prototype only.",
+    "languages":  [
+                      "JavaScript"
+                  ],
+    "tags":  [
+                 "Web",
+                 "Chat",
+                 "Prototype"
+             ],
+    "category":  "web",
+    "featured":  false,
+    "highlights":  [
+                       "Chat UI practice"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

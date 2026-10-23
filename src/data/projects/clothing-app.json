@@ -1,0 +1,24 @@
+{
+    "id":  "clothing-app",
+    "title":  "Clothing App",
+    "shortDescription":  "Android clothing app experiment.",
+    "description":  "Android Studio project around clothing / wardrobe ideas. Early build, not a store release.",
+    "languages":  [
+                      "Kotlin"
+                  ],
+    "tags":  [
+                 "Android",
+                 "Clothing"
+             ],
+    "category":  "mobile",
+    "featured":  false,
+    "highlights":  [
+                       "Android experiment"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

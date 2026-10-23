@@ -1,0 +1,26 @@
+{
+    "id":  "millioner-game",
+    "title":  "Millioner Game",
+    "shortDescription":  "Unity quiz / millionaire-style game.",
+    "description":  "Unity project shaped like a who-wants-to-be-a-millionaire quiz. Question flow and UI practice.",
+    "languages":  [
+                      "C#"
+                  ],
+    "tags":  [
+                 "Unity",
+                 "Quiz",
+                 "Game"
+             ],
+    "category":  "game",
+    "featured":  false,
+    "highlights":  [
+                       "Quiz format",
+                       "Unity"
+                   ],
+    "screenshots":  [
+
+                    ],
+    "links":  {
+
+              }
+}

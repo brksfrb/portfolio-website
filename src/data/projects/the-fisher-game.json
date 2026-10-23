@@ -1,0 +1,22 @@
+{
+  "id": "the-fisher-game",
+  "title": "The Fisher Game",
+  "shortDescription": "Tkinter idle fishing game with rods, coins and shop upgrades.",
+  "description": "Desktop idle fishing game in Python and Tkinter. Players fish for coins, unlock better rods and climb a simple upgrade ladder. Assets download on first run.",
+  "languages": [
+    "Python"
+  ],
+  "tags": [
+    "Tkinter",
+    "Idle Game",
+    "Desktop"
+  ],
+  "category": "game",
+  "featured": false,
+  "highlights": [
+    "Rod upgrade shop",
+    "Coin loop idle gameplay"
+  ],
+  "screenshots": [],
+  "links": {}
+}
