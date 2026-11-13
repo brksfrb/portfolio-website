@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import Stats from '../components/Stats.astro';
 import archiveData from '../data/archive.json';
+import { ageFromBirthdate } from '../lib/age';
 
 // Load all project JSON files
 const projectFiles = [
@@ -28,6 +29,7 @@ const languages = [
     { name: 'Flutter', count: '5', color: '#3ecfef' },
     { name: 'HTML/CSS', count: '20+', color: '#e06a3a' },
 ];
+const age = ageFromBirthdate();
 ---
 
 <Layout title="Portfolio — Developer" description="Full-stack developer. 300+ projects built across 10+ languages.">
@@ -41,7 +43,7 @@ const languages = [
         <div class="container hero-content">
             <div class="hero-label">
                 <span class="label-dot"></span>
-                <span class="label-text">Burak Yılmaz · 18 years old · Developer & Entrepreneur</span>
+                <span class="label-text">Burak Yılmaz · <span data-age>{age}</span> years old · Developer & Entrepreneur</span>
             </div>
 
             <div class="hero-title-wrap">
@@ -59,7 +61,7 @@ const languages = [
 
             <div class="hero-stats-row">
                 <div class="hero-stat">
-                    <span class="hero-stat-value">18</span>
+                    <span class="hero-stat-value" data-age>{age}</span>
                     <span class="hero-stat-label">years old</span>
                 </div>
                 <div class="hero-stat-divider"></div>

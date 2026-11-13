@@ -1,9 +1,12 @@
 ---
+import { ageFromBirthdate } from '../lib/age';
+
 interface Props {
     title?: string;
     description?: string;
 }
 const { title = "Portfolio", description = "Developer portfolio" } = Astro.props;
+const age = ageFromBirthdate();
 
 // Check if current page is contact
 const currentPath = Astro.url.pathname;
@@ -56,7 +59,7 @@ const isContactPage = currentPath === '/contact' || currentPath === '/contact/';
             <p class="footer-text">
                 <span class="mono">// </span>
                 <span class="accent">Burak Yılmaz</span>
-                <span class="mono"> · 18 · Startup Founder</span>
+                <span class="mono"> · <span data-age>{age}</span> · Startup Founder</span>
             </p>
             <div class="footer-socials">
                 <a href="mailto:contact@brksfrb.com" class="footer-link">Email</a>
@@ -90,6 +93,13 @@ const isContactPage = currentPath === '/contact' || currentPath === '/contact/';
         });
     }, { threshold: 0.1 });
     reveals.forEach(el => observer.observe(el));
+</script>
+
+<script>
+    import { ageFromBirthdate } from '../lib/age';
+    document.querySelectorAll('[data-age]').forEach((el) => {
+        el.textContent = String(ageFromBirthdate());
+    });
 </script>
 </body>
 </html>
